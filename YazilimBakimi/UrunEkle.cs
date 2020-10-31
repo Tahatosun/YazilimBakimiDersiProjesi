@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace YazilimBakimi
 {
-    public partial class AnaEkran : MetroFramework.Forms.MetroForm
+    public partial class UrunEkle : MetroFramework.Forms.MetroForm
     {
-        public AnaEkran()
+        public UrunEkle()
         {
             InitializeComponent();
         }
 
-        private void AnaEkran_Load(object sender, EventArgs e)
+        private void UrunEkle_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnUrunEkle_Click(object sender, EventArgs e)
-        {
-            UrunEkle urunEkle = new UrunEkle();
-            urunEkle.Show();
         }
     }
 }
