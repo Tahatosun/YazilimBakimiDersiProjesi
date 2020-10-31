@@ -20,13 +20,16 @@ namespace YazilimBakimi
 
         private void AnaEkran_Load(object sender, EventArgs e)
         {
-
+            productOperation.UrunleriGetir(dataGridUrunler);
+            //dataGridUrunler.DataSource = productOperation.UrunleriGetir();
         }
 
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
             UrunEkle urunEkle = new UrunEkle();
             urunEkle.Show();
+                        
+
         }
 
         private void btnUrunGuncelle_Click(object sender, EventArgs e)
@@ -46,9 +49,16 @@ namespace YazilimBakimi
 
             }
             else
-            {
+            {                
                 MessageBox.Show("Lütfen ÜrünID'sini Girin!");
             }
+
+        }
+
+        private void dataGridUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String selectedId = dataGridUrunler.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtBxUrunGuncelleID.Text = selectedId;
 
         }
     }

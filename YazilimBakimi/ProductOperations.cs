@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace YazilimBakimi
 {
@@ -45,7 +45,34 @@ namespace YazilimBakimi
         }
 
 
+        public void UrunleriGetir(DataGridView datagrid) {
+
+            List<Urun> urunlerList=new List<Urun>();
+
+            sqlConnection.Connection().Open();
+            SqlCommand urungetir = new SqlCommand("select * from tblurunler", sqlConnection.Connection());
+            SqlDataReader data = urungetir.ExecuteReader();
+            while (data.Read())
+            {
+                Urun urun = new Urun();
+                urun.UrunID = data[0].ToString();
+                urun.UrunAdi = data[1].ToString();
+                urun.urunStok = data[2].ToString();
+                urun.urunBirimFiyat = data[3].ToString();
+                urunlerList.Add(urun);
+
+            }
+            sqlConnection.Connection().Close();
+
+            datagrid.DataSource = urunlerList;
+
+         
 
 
+        }
     }
+
+
+
+    
 }

@@ -32,9 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBxUrunAdi = new System.Windows.Forms.TextBox();
-            this.txtBxStokAdedi = new System.Windows.Forms.TextBox();
-            this.txtBxBirimFiyat = new System.Windows.Forms.TextBox();
             this.btnEkle = new MetroFramework.Controls.MetroTile();
+            this.txtBxStokAdedi = new System.Windows.Forms.MaskedTextBox();
+            this.txtBxBirimFiyat = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,22 +75,6 @@
             this.txtBxUrunAdi.Size = new System.Drawing.Size(171, 26);
             this.txtBxUrunAdi.TabIndex = 4;
             // 
-            // txtBxStokAdedi
-            // 
-            this.txtBxStokAdedi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBxStokAdedi.Location = new System.Drawing.Point(158, 150);
-            this.txtBxStokAdedi.Name = "txtBxStokAdedi";
-            this.txtBxStokAdedi.Size = new System.Drawing.Size(171, 26);
-            this.txtBxStokAdedi.TabIndex = 6;
-            // 
-            // txtBxBirimFiyat
-            // 
-            this.txtBxBirimFiyat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBxBirimFiyat.Location = new System.Drawing.Point(158, 181);
-            this.txtBxBirimFiyat.Name = "txtBxBirimFiyat";
-            this.txtBxBirimFiyat.Size = new System.Drawing.Size(171, 26);
-            this.txtBxBirimFiyat.TabIndex = 7;
-            // 
             // btnEkle
             // 
             this.btnEkle.ActiveControl = null;
@@ -104,14 +88,34 @@
             this.btnEkle.UseSelectable = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
+            // txtBxStokAdedi
+            // 
+            this.txtBxStokAdedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtBxStokAdedi.Location = new System.Drawing.Point(158, 149);
+            this.txtBxStokAdedi.Mask = "0000000000000000000000";
+            this.txtBxStokAdedi.Name = "txtBxStokAdedi";
+            this.txtBxStokAdedi.Size = new System.Drawing.Size(171, 24);
+            this.txtBxStokAdedi.TabIndex = 10;
+            this.txtBxStokAdedi.ValidatingType = typeof(int);
+            // 
+            // txtBxBirimFiyat
+            // 
+            this.txtBxBirimFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtBxBirimFiyat.Location = new System.Drawing.Point(158, 183);
+            this.txtBxBirimFiyat.Mask = "0000000000000000000000";
+            this.txtBxBirimFiyat.Name = "txtBxBirimFiyat";
+            this.txtBxBirimFiyat.Size = new System.Drawing.Size(171, 24);
+            this.txtBxBirimFiyat.TabIndex = 11;
+            this.txtBxBirimFiyat.ValidatingType = typeof(int);
+            // 
             // UrunEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 407);
-            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtBxBirimFiyat);
             this.Controls.Add(this.txtBxStokAdedi);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtBxUrunAdi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -130,8 +134,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBxUrunAdi;
-        private System.Windows.Forms.TextBox txtBxStokAdedi;
-        private System.Windows.Forms.TextBox txtBxBirimFiyat;
         private MetroFramework.Controls.MetroTile btnEkle;
+        private System.Windows.Forms.MaskedTextBox txtBxStokAdedi;
+        private System.Windows.Forms.MaskedTextBox txtBxBirimFiyat;
     }
 }

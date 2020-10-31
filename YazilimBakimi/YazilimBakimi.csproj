@@ -87,6 +87,7 @@
     <Compile Include="UrunGuncelle.Designer.cs">
       <DependentUpon>UrunGuncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Urun.cs" />
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>
