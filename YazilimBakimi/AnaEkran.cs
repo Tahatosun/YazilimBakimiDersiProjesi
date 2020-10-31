@@ -12,6 +12,7 @@ namespace YazilimBakimi
 {
     public partial class AnaEkran : MetroFramework.Forms.MetroForm
     {
+        ProductOperations productOperation = new ProductOperations();
         public AnaEkran()
         {
             InitializeComponent();
@@ -26,6 +27,29 @@ namespace YazilimBakimi
         {
             UrunEkle urunEkle = new UrunEkle();
             urunEkle.Show();
+        }
+
+        private void btnUrunGuncelle_Click(object sender, EventArgs e)
+        {
+
+            if (txtBxUrunGuncelleID.Text != "") {
+
+                if (productOperation.UrunKontrol(txtBxUrunGuncelleID.Text) == true)
+                {
+                    UrunGuncelle urunGuncelle = new UrunGuncelle();
+                    urunGuncelle.urunID = Convert.ToInt32(txtBxUrunGuncelleID.Text);
+                    urunGuncelle.Show();
+                }
+                else {
+                    MessageBox.Show("Böyle bir ürün bulunamadı!");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Lütfen ÜrünID'sini Girin!");
+            }
+
         }
     }
 }

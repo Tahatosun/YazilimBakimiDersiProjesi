@@ -52,6 +52,7 @@
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuncelle.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnGuncelle.UseSelectable = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // txtBxBirimFiyatGuncelle
             // 

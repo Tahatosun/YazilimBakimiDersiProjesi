@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace YazilimBakimi
 {
+              
     public partial class UrunEkle : MetroFramework.Forms.MetroForm
     {
+        ProductOperations productOperations = new ProductOperations();
         public UrunEkle()
         {
             InitializeComponent();
@@ -19,6 +21,29 @@ namespace YazilimBakimi
 
         private void UrunEkle_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            if (txtBxBirimFiyat.Text != "" && txtBxStokAdedi.Text != "" && txtBxUrunAdi.Text != "")
+            {
+                if (Convert.ToInt64(txtBxStokAdedi.Text) >= 0 && Convert.ToInt64(txtBxBirimFiyat.Text) > 0)
+                {
+                    productOperations.UrunEkle(txtBxUrunAdi.Text, Convert.ToInt64(txtBxStokAdedi.Text), Convert.ToInt64(txtBxBirimFiyat.Text));
+                    txtBxBirimFiyat.Text = "";
+                    txtBxStokAdedi.Text = "";
+                    txtBxUrunAdi.Text = "";
+                }
+                else {
+                    MessageBox.Show("Lütfen alanların Doğruluğundan emin olun!");
+                }
+            }
+            else {
+                MessageBox.Show("Lütfen gerekli alanları doldurun!");
+            }
+
+
 
         }
     }

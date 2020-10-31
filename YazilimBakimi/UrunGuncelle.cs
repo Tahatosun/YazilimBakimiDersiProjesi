@@ -12,12 +12,19 @@ namespace YazilimBakimi
 {
     public partial class UrunGuncelle : MetroFramework.Forms.MetroForm
     {
+        public int urunID;
+
         public UrunGuncelle()
         {
             InitializeComponent();
         }
 
         private void UrunGuncelle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
         {
 
         }
