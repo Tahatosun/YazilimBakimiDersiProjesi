@@ -27,8 +27,8 @@ namespace YazilimBakimi
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
             UrunEkle urunEkle = new UrunEkle();
-            urunEkle.Show();
-                        
+            urunEkle.urunlerDataGrid = dataGridUrunler;
+            urunEkle.Show();                        
 
         }
 
@@ -41,6 +41,7 @@ namespace YazilimBakimi
                 {
                     UrunGuncelle urunGuncelle = new UrunGuncelle();
                     urunGuncelle.urunID = Convert.ToInt32(txtBxUrunGuncelleID.Text);
+                    urunGuncelle.urunelerDataGrid = dataGridUrunler;
                     urunGuncelle.Show();
                 }
                 else {
@@ -62,5 +63,15 @@ namespace YazilimBakimi
             txtBxUrunSilID.Text = selectedId;
 
         }
+
+        private void btnUrunSil_Click(object sender, EventArgs e)
+        {
+
+            productOperation.urunSil(txtBxUrunSilID.Text);
+            productOperation.UrunleriGetir(dataGridUrunler);
+
+        }
+
+       
     }
 }

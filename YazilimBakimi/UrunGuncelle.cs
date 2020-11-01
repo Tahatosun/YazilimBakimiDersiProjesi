@@ -14,6 +14,7 @@ namespace YazilimBakimi
     {
         ProductOperations productOperations = new ProductOperations();
         public int urunID;
+        public DataGridView urunelerDataGrid;
         Urun urun = new Urun();
         public UrunGuncelle()
         {
@@ -36,6 +37,7 @@ namespace YazilimBakimi
                 if (Convert.ToInt64(txtBxStokAdediGuncelle.Text) >= 0 && Convert.ToInt64(txtBxBirimFiyatGuncelle.Text) > 0)
                 {
                     productOperations.urunGuncelle(txtUrunGuncelleUrunID.Text,txtBxUrunAdiGuncelle.Text,txtBxStokAdediGuncelle.Text,txtBxBirimFiyatGuncelle.Text);
+                    productOperations.UrunleriGetir(urunelerDataGrid);
                 }
                 else
                 {

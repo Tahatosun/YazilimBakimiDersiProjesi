@@ -13,6 +13,7 @@ namespace YazilimBakimi
               
     public partial class UrunEkle : MetroFramework.Forms.MetroForm
     {
+        public DataGridView urunlerDataGrid;
         ProductOperations productOperations = new ProductOperations();
         public UrunEkle()
         {
@@ -34,6 +35,7 @@ namespace YazilimBakimi
                     txtBxBirimFiyat.Text = "";
                     txtBxStokAdedi.Text = "";
                     txtBxUrunAdi.Text = "";
+                    productOperations.UrunleriGetir(urunlerDataGrid);
                 }
                 else {
                     MessageBox.Show("Lütfen alanların Doğruluğundan emin olun!");

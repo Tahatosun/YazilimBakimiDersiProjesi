@@ -140,7 +140,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "UrunGuncelle";
-            this.Text = "UrunGuncelle";
+            this.Text = "UrunGuncelle";            
             this.Load += new System.EventHandler(this.UrunGuncelle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

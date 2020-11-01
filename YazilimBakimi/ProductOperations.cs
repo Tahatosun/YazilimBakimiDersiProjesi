@@ -98,7 +98,16 @@ namespace YazilimBakimi
             urunguncelle.ExecuteNonQuery();
             sqlConnection.Connection().Close();
 
+        }
 
+
+        public void urunSil(String ıd) {
+
+            sqlConnection.Connection().Open();
+            SqlCommand urunSil = new SqlCommand("DELETE tblurunler WHERE urunID=@p1", sqlConnection.Connection());
+            urunSil.Parameters.AddWithValue("@p1", ıd);
+            urunSil.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
 
         }
 
