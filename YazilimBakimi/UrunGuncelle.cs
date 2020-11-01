@@ -12,8 +12,9 @@ namespace YazilimBakimi
 {
     public partial class UrunGuncelle : MetroFramework.Forms.MetroForm
     {
+        ProductOperations productOperations = new ProductOperations();
         public int urunID;
-
+        Urun urun = new Urun();
         public UrunGuncelle()
         {
             InitializeComponent();
@@ -21,12 +22,30 @@ namespace YazilimBakimi
 
         private void UrunGuncelle_Load(object sender, EventArgs e)
         {
-
+            urun=productOperations.urunGetir(urunID.ToString());
+            txtUrunGuncelleUrunID.Text = urun.UrunID;
+            txtBxUrunAdiGuncelle.Text = urun.UrunAdi;
+            txtBxStokAdediGuncelle.Text = urun.urunStok;
+            txtBxBirimFiyatGuncelle.Text = urun.urunBirimFiyat;
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-
+            if (txtBxUrunAdiGuncelle.Text != "" && txtBxStokAdediGuncelle.Text != "" && txtBxBirimFiyatGuncelle.Text != "")
+            {
+                if (Convert.ToInt64(txtBxStokAdediGuncelle.Text) >= 0 && Convert.ToInt64(txtBxBirimFiyatGuncelle.Text) > 0)
+                {
+                    productOperations.urunGuncelle(txtUrunGuncelleUrunID.Text,txtBxUrunAdiGuncelle.Text,txtBxStokAdediGuncelle.Text,txtBxBirimFiyatGuncelle.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen alanların Doğruluğundan emin olun!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen gerekli alanları doldurun!");
+            }
         }
     }
 }

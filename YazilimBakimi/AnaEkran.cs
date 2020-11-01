@@ -59,6 +59,7 @@ namespace YazilimBakimi
         {
             String selectedId = dataGridUrunler.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtBxUrunGuncelleID.Text = selectedId;
+            txtBxUrunSilID.Text = selectedId;
 
         }
     }

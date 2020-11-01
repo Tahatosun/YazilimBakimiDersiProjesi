@@ -16,18 +16,17 @@ namespace YazilimBakimi
         public void UrunEkle(String urunAd,long stok,long birimFiyat) {
 
             sqlConnection.Connection().Open();
-
             SqlCommand productAdd = new SqlCommand(" insert into tblurunler (urunAd,urunStok,urunBirimFiyat) values(@P1,@P2,@P3)", sqlConnection.Connection());
             productAdd.Parameters.AddWithValue("@p1", urunAd);
             productAdd.Parameters.AddWithValue("@p2", stok);
             productAdd.Parameters.AddWithValue("@p3", birimFiyat);
-            productAdd.ExecuteNonQuery();
-  
+            productAdd.ExecuteNonQuery();  
             sqlConnection.Connection().Close();
         
         }
 
         public Boolean UrunKontrol(String urunıID){
+
             sqlConnection.Connection().Open();
             SqlCommand urunKontrol = new SqlCommand("select urunID from tblurunler", sqlConnection.Connection());
             SqlDataReader data = urunKontrol.ExecuteReader();
@@ -60,16 +59,51 @@ namespace YazilimBakimi
                 urun.urunStok = data[2].ToString();
                 urun.urunBirimFiyat = data[3].ToString();
                 urunlerList.Add(urun);
-
             }
             sqlConnection.Connection().Close();
 
             datagrid.DataSource = urunlerList;
+        
+        }
 
-         
+        public Urun urunGetir(String Id) {
+            Urun seciliUrun=new Urun();
+
+            sqlConnection.Connection().Open();
+            SqlCommand seciliUrungetir = new SqlCommand("select * from tblurunler where urunID = @p1", sqlConnection.Connection());
+            seciliUrungetir.Parameters.AddWithValue("@p1", Id);
+            SqlDataReader data = seciliUrungetir.ExecuteReader();
+            while (data.Read()) {
+
+                seciliUrun.UrunID = data[0].ToString();
+                seciliUrun.UrunAdi = data[1].ToString();
+                seciliUrun.urunStok = data[2].ToString();
+                seciliUrun.urunBirimFiyat = data[3].ToString();
+
+            }
+            sqlConnection.Connection().Close();
+
+            return seciliUrun;
+        }
+
+
+        public void urunGuncelle(string ıd,String urunAd,String stok, string fiyat) {
+
+            sqlConnection.Connection().Open();
+            SqlCommand urunguncelle = new SqlCommand("UPDATE tblurunler SET urunAd=@p1,urunStok=@p2,urunBİrimFiyat=@p3  WHERE urunID=@p0", sqlConnection.Connection());
+            urunguncelle.Parameters.AddWithValue("@p0", ıd);
+            urunguncelle.Parameters.AddWithValue("@p1", urunAd);
+            urunguncelle.Parameters.AddWithValue("@p2", stok);
+            urunguncelle.Parameters.AddWithValue("@p3", fiyat);
+            urunguncelle.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+
 
 
         }
+
+
+
     }
 
 
