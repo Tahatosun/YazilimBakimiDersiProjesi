@@ -61,6 +61,7 @@
     <Compile Include="AnaEkran.Designer.cs">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bayi.cs" />
     <Compile Include="BayiEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +74,7 @@
     <Compile Include="BayiGuncelle.Designer.cs">
       <DependentUpon>BayiGuncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="DealerOperations.cs" />
     <Compile Include="LoginDataBaseOperations.cs" />
     <Compile Include="GirisEkrani.cs">
       <SubType>Form</SubType>
@@ -127,6 +129,9 @@
     <EmbeddedResource Include="UrunGuncelle.resx">
       <DependentUpon>UrunGuncelle.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

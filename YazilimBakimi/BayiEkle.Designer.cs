@@ -32,17 +32,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBayiAdres = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBayiEposta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBayiTel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnEkleBayi = new MetroFramework.Controls.MetroTile();
+            this.txtBayiEposta = new System.Windows.Forms.TextBox();
+            this.txtBayiTel = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtBayiAd
             // 
+            this.txtBayiAd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBayiAd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBayiAd.Location = new System.Drawing.Point(152, 131);
+            this.txtBayiAd.MaxLength = 50;
             this.txtBayiAd.Name = "txtBayiAd";
             this.txtBayiAd.Size = new System.Drawing.Size(348, 26);
             this.txtBayiAd.TabIndex = 6;
@@ -61,6 +63,7 @@
             // 
             this.txtBayiAdres.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBayiAdres.Location = new System.Drawing.Point(152, 185);
+            this.txtBayiAdres.MaxLength = 250;
             this.txtBayiAdres.Multiline = true;
             this.txtBayiAdres.Name = "txtBayiAdres";
             this.txtBayiAdres.Size = new System.Drawing.Size(348, 99);
@@ -76,14 +79,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Bayi Adresi:";
             // 
-            // txtBayiEposta
-            // 
-            this.txtBayiEposta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBayiEposta.Location = new System.Drawing.Point(152, 307);
-            this.txtBayiEposta.Name = "txtBayiEposta";
-            this.txtBayiEposta.Size = new System.Drawing.Size(348, 26);
-            this.txtBayiEposta.TabIndex = 10;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -93,14 +88,6 @@
             this.label3.Size = new System.Drawing.Size(108, 21);
             this.label3.TabIndex = 9;
             this.label3.Text = "Bayi E-posta:";
-            // 
-            // txtBayiTel
-            // 
-            this.txtBayiTel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBayiTel.Location = new System.Drawing.Point(152, 351);
-            this.txtBayiTel.Name = "txtBayiTel";
-            this.txtBayiTel.Size = new System.Drawing.Size(348, 26);
-            this.txtBayiTel.TabIndex = 12;
             // 
             // label4
             // 
@@ -123,14 +110,33 @@
             this.btnEkleBayi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEkleBayi.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnEkleBayi.UseSelectable = true;
+            this.btnEkleBayi.Click += new System.EventHandler(this.btnEkleBayi_Click);
+            // 
+            // txtBayiEposta
+            // 
+            this.txtBayiEposta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBayiEposta.Location = new System.Drawing.Point(152, 307);
+            this.txtBayiEposta.MaxLength = 50;
+            this.txtBayiEposta.Name = "txtBayiEposta";
+            this.txtBayiEposta.Size = new System.Drawing.Size(348, 26);
+            this.txtBayiEposta.TabIndex = 10;
+            // 
+            // txtBayiTel
+            // 
+            this.txtBayiTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtBayiTel.Location = new System.Drawing.Point(152, 353);
+            this.txtBayiTel.Mask = "00000000000";
+            this.txtBayiTel.Name = "txtBayiTel";
+            this.txtBayiTel.Size = new System.Drawing.Size(348, 24);
+            this.txtBayiTel.TabIndex = 14;
             // 
             // BayiEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 490);
-            this.Controls.Add(this.btnEkleBayi);
             this.Controls.Add(this.txtBayiTel);
+            this.Controls.Add(this.btnEkleBayi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBayiEposta);
             this.Controls.Add(this.label3);
@@ -152,10 +158,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBayiAdres;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBayiEposta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBayiTel;
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroTile btnEkleBayi;
+        private System.Windows.Forms.TextBox txtBayiEposta;
+        private System.Windows.Forms.MaskedTextBox txtBayiTel;
     }
 }

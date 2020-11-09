@@ -13,6 +13,7 @@ namespace YazilimBakimi
     public partial class AnaEkran : MetroFramework.Forms.MetroForm
     {
         ProductOperations productOperation = new ProductOperations();
+        DealerOperations dealerOperations = new DealerOperations();
         public AnaEkran()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace YazilimBakimi
         private void AnaEkran_Load(object sender, EventArgs e)
         {
             productOperation.UrunleriGetir(dataGridUrunler);
+            dealerOperations.bayileriGetir(dataGridBayiler);
+            
             //dataGridUrunler.DataSource = productOperation.UrunleriGetir();
         }
 
@@ -72,6 +75,11 @@ namespace YazilimBakimi
 
         }
 
-       
+        private void btnBayiEkle_Click(object sender, EventArgs e)
+        {
+            BayiEkle bayiEkle  = new BayiEkle();
+            bayiEkle.bayilerDataGrid = dataGridBayiler;
+            bayiEkle.Show();
+        }
     }
 }
