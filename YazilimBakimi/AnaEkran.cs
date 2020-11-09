@@ -81,5 +81,43 @@ namespace YazilimBakimi
             bayiEkle.bayilerDataGrid = dataGridBayiler;
             bayiEkle.Show();
         }
+
+        private void dataGridBayiler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String selectedId = dataGridBayiler.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtBayiGuncelleID.Text = selectedId;
+            txtBayiSilID.Text = selectedId;
+        }
+
+        private void btnBayiGuncelle_Click(object sender, EventArgs e)
+        {
+            if (txtBayiGuncelleID.Text != "")
+            {
+                if (dealerOperations.BayiKontrol(txtBayiGuncelleID.Text) == true) {
+
+                    BayiGuncelle bayiGuncelle = new BayiGuncelle();
+                    bayiGuncelle.bayiID = Convert.ToInt32(txtBayiGuncelleID.Text);
+                    bayiGuncelle.bayilerDataGrid = dataGridBayiler;
+                    bayiGuncelle.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Böyle bir Bayi bulunamadı!");
+                }
+
+            }
+            else {
+                MessageBox.Show("Lütfen BayiID'sini Girin!");
+            }
+
+
+        }
+
+        private void btnBayiSil_Click(object sender, EventArgs e)
+        {
+            dealerOperations.BayiSil(txtBayiSilID.Text);
+            dealerOperations.bayileriGetir(dataGridBayiler);
+        }
     }
 }

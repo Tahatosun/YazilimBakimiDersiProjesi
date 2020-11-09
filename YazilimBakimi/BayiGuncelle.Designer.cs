@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnGuncelleBayi = new MetroFramework.Controls.MetroTile();
-            this.txtBayiTelGuncelle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBayiEpostaGuncelle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,8 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBayiAdGuncelle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBayiID = new System.Windows.Forms.TextBox();
+            this.txtBayiIDGuncelle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtBayiTelGuncelle = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btnGuncelleBayi
@@ -52,14 +52,7 @@
             this.btnGuncelleBayi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuncelleBayi.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnGuncelleBayi.UseSelectable = true;
-            // 
-            // txtBayiTelGuncelle
-            // 
-            this.txtBayiTelGuncelle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBayiTelGuncelle.Location = new System.Drawing.Point(164, 365);
-            this.txtBayiTelGuncelle.Name = "txtBayiTelGuncelle";
-            this.txtBayiTelGuncelle.Size = new System.Drawing.Size(348, 26);
-            this.txtBayiTelGuncelle.TabIndex = 21;
+            this.btnGuncelleBayi.Click += new System.EventHandler(this.btnGuncelleBayi_Click);
             // 
             // label4
             // 
@@ -75,6 +68,7 @@
             // 
             this.txtBayiEpostaGuncelle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBayiEpostaGuncelle.Location = new System.Drawing.Point(164, 321);
+            this.txtBayiEpostaGuncelle.MaxLength = 50;
             this.txtBayiEpostaGuncelle.Name = "txtBayiEpostaGuncelle";
             this.txtBayiEpostaGuncelle.Size = new System.Drawing.Size(348, 26);
             this.txtBayiEpostaGuncelle.TabIndex = 19;
@@ -93,6 +87,7 @@
             // 
             this.txtBayiAdresGuncelle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBayiAdresGuncelle.Location = new System.Drawing.Point(164, 199);
+            this.txtBayiAdresGuncelle.MaxLength = 250;
             this.txtBayiAdresGuncelle.Multiline = true;
             this.txtBayiAdresGuncelle.Name = "txtBayiAdresGuncelle";
             this.txtBayiAdresGuncelle.Size = new System.Drawing.Size(348, 99);
@@ -112,6 +107,7 @@
             // 
             this.txtBayiAdGuncelle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBayiAdGuncelle.Location = new System.Drawing.Point(164, 145);
+            this.txtBayiAdGuncelle.MaxLength = 50;
             this.txtBayiAdGuncelle.Name = "txtBayiAdGuncelle";
             this.txtBayiAdGuncelle.Size = new System.Drawing.Size(348, 26);
             this.txtBayiAdGuncelle.TabIndex = 15;
@@ -126,14 +122,14 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Bayi Adi:";
             // 
-            // txtBayiID
+            // txtBayiIDGuncelle
             // 
-            this.txtBayiID.Enabled = false;
-            this.txtBayiID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBayiID.Location = new System.Drawing.Point(164, 113);
-            this.txtBayiID.Name = "txtBayiID";
-            this.txtBayiID.Size = new System.Drawing.Size(348, 26);
-            this.txtBayiID.TabIndex = 24;
+            this.txtBayiIDGuncelle.Enabled = false;
+            this.txtBayiIDGuncelle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBayiIDGuncelle.Location = new System.Drawing.Point(164, 113);
+            this.txtBayiIDGuncelle.Name = "txtBayiIDGuncelle";
+            this.txtBayiIDGuncelle.Size = new System.Drawing.Size(348, 26);
+            this.txtBayiIDGuncelle.TabIndex = 24;
             // 
             // label5
             // 
@@ -145,15 +141,24 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Bayi ID:";
             // 
+            // txtBayiTelGuncelle
+            // 
+            this.txtBayiTelGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtBayiTelGuncelle.Location = new System.Drawing.Point(164, 366);
+            this.txtBayiTelGuncelle.Mask = "00000000000";
+            this.txtBayiTelGuncelle.Name = "txtBayiTelGuncelle";
+            this.txtBayiTelGuncelle.Size = new System.Drawing.Size(348, 24);
+            this.txtBayiTelGuncelle.TabIndex = 25;
+            // 
             // BayiGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 504);
-            this.Controls.Add(this.txtBayiID);
+            this.Controls.Add(this.txtBayiTelGuncelle);
+            this.Controls.Add(this.txtBayiIDGuncelle);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnGuncelleBayi);
-            this.Controls.Add(this.txtBayiTelGuncelle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBayiEpostaGuncelle);
             this.Controls.Add(this.label3);
@@ -172,7 +177,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroTile btnGuncelleBayi;
-        private System.Windows.Forms.TextBox txtBayiTelGuncelle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBayiEpostaGuncelle;
         private System.Windows.Forms.Label label3;
@@ -180,7 +184,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBayiAdGuncelle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBayiID;
+        private System.Windows.Forms.TextBox txtBayiIDGuncelle;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox txtBayiTelGuncelle;
     }
 }
