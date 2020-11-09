@@ -61,6 +61,18 @@
     <Compile Include="AnaEkran.Designer.cs">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="BayiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BayiEkle.Designer.cs">
+      <DependentUpon>BayiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BayiGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BayiGuncelle.Designer.cs">
+      <DependentUpon>BayiGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginDataBaseOperations.cs" />
     <Compile Include="GirisEkrani.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,12 @@
     <Compile Include="Urun.cs" />
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BayiEkle.resx">
+      <DependentUpon>BayiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BayiGuncelle.resx">
+      <DependentUpon>BayiGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
