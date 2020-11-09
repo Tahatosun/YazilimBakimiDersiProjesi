@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,12 +49,28 @@
             this.dataGridUrunler = new MetroFramework.Controls.MetroGrid();
             this.tpBayiYonetimi = new MetroFramework.Controls.MetroTabPage();
             this.tpUrunSatisYonetimi = new System.Windows.Forms.TabPage();
+            this.grpBayiler = new System.Windows.Forms.GroupBox();
+            this.dataGridBayiler = new MetroFramework.Controls.MetroGrid();
+            this.grpBayiSil = new System.Windows.Forms.GroupBox();
+            this.txtBayiSilID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBayiSil = new MetroFramework.Controls.MetroTile();
+            this.grpBayiGuncelle = new System.Windows.Forms.GroupBox();
+            this.txtBayiGuncelleID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnBayiGuncelle = new MetroFramework.Controls.MetroTile();
+            this.btnBayiEkle = new MetroFramework.Controls.MetroTile();
             this.tabControl.SuspendLayout();
             this.tpUrunYonetimi.SuspendLayout();
             this.grpBxUrunSil.SuspendLayout();
             this.grpBxUrunGuncelle.SuspendLayout();
             this.grpBxUrunler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUrunler)).BeginInit();
+            this.tpBayiYonetimi.SuspendLayout();
+            this.grpBayiler.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBayiler)).BeginInit();
+            this.grpBayiSil.SuspendLayout();
+            this.grpBayiGuncelle.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -62,7 +81,7 @@
             this.tabControl.Location = new System.Drawing.Point(23, 81);
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
+            this.tabControl.SelectedIndex = 1;
             this.tabControl.Size = new System.Drawing.Size(1093, 709);
             this.tabControl.TabIndex = 0;
             this.tabControl.UseSelectable = true;
@@ -195,23 +214,23 @@
             this.dataGridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridUrunler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridUrunler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridUrunler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridUrunler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridUrunler.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridUrunler.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridUrunler.EnableHeadersVisualStyles = false;
             this.dataGridUrunler.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -220,14 +239,14 @@
             this.dataGridUrunler.Name = "dataGridUrunler";
             this.dataGridUrunler.ReadOnly = true;
             this.dataGridUrunler.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridUrunler.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridUrunler.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridUrunler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridUrunler.Size = new System.Drawing.Size(842, 610);
@@ -236,6 +255,10 @@
             // 
             // tpBayiYonetimi
             // 
+            this.tpBayiYonetimi.Controls.Add(this.grpBayiSil);
+            this.tpBayiYonetimi.Controls.Add(this.grpBayiGuncelle);
+            this.tpBayiYonetimi.Controls.Add(this.btnBayiEkle);
+            this.tpBayiYonetimi.Controls.Add(this.grpBayiler);
             this.tpBayiYonetimi.HorizontalScrollbarBarColor = true;
             this.tpBayiYonetimi.HorizontalScrollbarHighlightOnWheel = false;
             this.tpBayiYonetimi.HorizontalScrollbarSize = 10;
@@ -256,6 +279,159 @@
             this.tpUrunSatisYonetimi.TabIndex = 2;
             this.tpUrunSatisYonetimi.Text = "Ürün Satış Yönetimi";
             // 
+            // grpBayiler
+            // 
+            this.grpBayiler.BackColor = System.Drawing.Color.Transparent;
+            this.grpBayiler.Controls.Add(this.dataGridBayiler);
+            this.grpBayiler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.grpBayiler.Location = new System.Drawing.Point(3, 20);
+            this.grpBayiler.Name = "grpBayiler";
+            this.grpBayiler.Size = new System.Drawing.Size(840, 632);
+            this.grpBayiler.TabIndex = 2;
+            this.grpBayiler.TabStop = false;
+            this.grpBayiler.Text = "BAYİLER";
+            // 
+            // dataGridBayiler
+            // 
+            this.dataGridBayiler.AllowUserToAddRows = false;
+            this.dataGridBayiler.AllowUserToDeleteRows = false;
+            this.dataGridBayiler.AllowUserToResizeRows = false;
+            this.dataGridBayiler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridBayiler.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridBayiler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridBayiler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridBayiler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridBayiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridBayiler.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridBayiler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridBayiler.EnableHeadersVisualStyles = false;
+            this.dataGridBayiler.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridBayiler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridBayiler.Location = new System.Drawing.Point(3, 19);
+            this.dataGridBayiler.Name = "dataGridBayiler";
+            this.dataGridBayiler.ReadOnly = true;
+            this.dataGridBayiler.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridBayiler.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridBayiler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridBayiler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridBayiler.Size = new System.Drawing.Size(834, 610);
+            this.dataGridBayiler.TabIndex = 0;
+            // 
+            // grpBayiSil
+            // 
+            this.grpBayiSil.BackColor = System.Drawing.Color.Transparent;
+            this.grpBayiSil.Controls.Add(this.txtBayiSilID);
+            this.grpBayiSil.Controls.Add(this.label3);
+            this.grpBayiSil.Controls.Add(this.btnBayiSil);
+            this.grpBayiSil.Location = new System.Drawing.Point(861, 227);
+            this.grpBayiSil.Name = "grpBayiSil";
+            this.grpBayiSil.Size = new System.Drawing.Size(214, 112);
+            this.grpBayiSil.TabIndex = 14;
+            this.grpBayiSil.TabStop = false;
+            this.grpBayiSil.Text = "BAYİ SİL";
+            // 
+            // txtBayiSilID
+            // 
+            this.txtBayiSilID.Location = new System.Drawing.Point(58, 31);
+            this.txtBayiSilID.Name = "txtBayiSilID";
+            this.txtBayiSilID.Size = new System.Drawing.Size(147, 20);
+            this.txtBayiSilID.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Bayi ID:";
+            // 
+            // btnBayiSil
+            // 
+            this.btnBayiSil.ActiveControl = null;
+            this.btnBayiSil.Location = new System.Drawing.Point(6, 65);
+            this.btnBayiSil.Name = "btnBayiSil";
+            this.btnBayiSil.Size = new System.Drawing.Size(202, 40);
+            this.btnBayiSil.TabIndex = 9;
+            this.btnBayiSil.Text = "Bayi Sil";
+            this.btnBayiSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBayiSil.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnBayiSil.UseSelectable = true;
+            // 
+            // grpBayiGuncelle
+            // 
+            this.grpBayiGuncelle.BackColor = System.Drawing.Color.Transparent;
+            this.grpBayiGuncelle.Controls.Add(this.txtBayiGuncelleID);
+            this.grpBayiGuncelle.Controls.Add(this.label4);
+            this.grpBayiGuncelle.Controls.Add(this.btnBayiGuncelle);
+            this.grpBayiGuncelle.Location = new System.Drawing.Point(861, 99);
+            this.grpBayiGuncelle.Name = "grpBayiGuncelle";
+            this.grpBayiGuncelle.Size = new System.Drawing.Size(214, 112);
+            this.grpBayiGuncelle.TabIndex = 13;
+            this.grpBayiGuncelle.TabStop = false;
+            this.grpBayiGuncelle.Text = "BAYİ GÜNCELLE";
+            // 
+            // txtBayiGuncelleID
+            // 
+            this.txtBayiGuncelleID.Location = new System.Drawing.Point(59, 31);
+            this.txtBayiGuncelleID.Name = "txtBayiGuncelleID";
+            this.txtBayiGuncelleID.Size = new System.Drawing.Size(147, 20);
+            this.txtBayiGuncelleID.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Bayi ID:";
+            // 
+            // btnBayiGuncelle
+            // 
+            this.btnBayiGuncelle.ActiveControl = null;
+            this.btnBayiGuncelle.Location = new System.Drawing.Point(6, 66);
+            this.btnBayiGuncelle.Name = "btnBayiGuncelle";
+            this.btnBayiGuncelle.Size = new System.Drawing.Size(202, 39);
+            this.btnBayiGuncelle.TabIndex = 9;
+            this.btnBayiGuncelle.Text = "Bayi Guncelle";
+            this.btnBayiGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBayiGuncelle.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnBayiGuncelle.UseSelectable = true;
+            // 
+            // btnBayiEkle
+            // 
+            this.btnBayiEkle.ActiveControl = null;
+            this.btnBayiEkle.Location = new System.Drawing.Point(861, 30);
+            this.btnBayiEkle.Name = "btnBayiEkle";
+            this.btnBayiEkle.Size = new System.Drawing.Size(214, 49);
+            this.btnBayiEkle.TabIndex = 12;
+            this.btnBayiEkle.Text = "Bayi Ekle";
+            this.btnBayiEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBayiEkle.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnBayiEkle.UseSelectable = true;
+            // 
             // AnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +449,13 @@
             this.grpBxUrunGuncelle.PerformLayout();
             this.grpBxUrunler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUrunler)).EndInit();
+            this.tpBayiYonetimi.ResumeLayout(false);
+            this.grpBayiler.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBayiler)).EndInit();
+            this.grpBayiSil.ResumeLayout(false);
+            this.grpBayiSil.PerformLayout();
+            this.grpBayiGuncelle.ResumeLayout(false);
+            this.grpBayiGuncelle.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -294,5 +477,16 @@
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTile btnUrunGuncelle;
         private MetroFramework.Controls.MetroTile btnUrunEkle;
+        private System.Windows.Forms.GroupBox grpBayiSil;
+        private System.Windows.Forms.TextBox txtBayiSilID;
+        private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroTile btnBayiSil;
+        private System.Windows.Forms.GroupBox grpBayiGuncelle;
+        private System.Windows.Forms.TextBox txtBayiGuncelleID;
+        private System.Windows.Forms.Label label4;
+        private MetroFramework.Controls.MetroTile btnBayiGuncelle;
+        private MetroFramework.Controls.MetroTile btnBayiEkle;
+        private System.Windows.Forms.GroupBox grpBayiler;
+        private MetroFramework.Controls.MetroGrid dataGridBayiler;
     }
 }
