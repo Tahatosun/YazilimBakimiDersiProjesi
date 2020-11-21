@@ -88,6 +88,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SendMail.cs" />
+    <Compile Include="SiparisOlusturmaEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisOlusturmaEkrani.Designer.cs">
+      <DependentUpon>SiparisOlusturmaEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQlConnection.cs" />
     <Compile Include="UrunEkle.cs">
       <SubType>Form</SubType>
@@ -123,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SiparisOlusturmaEkrani.resx">
+      <DependentUpon>SiparisOlusturmaEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UrunEkle.resx">
       <DependentUpon>UrunEkle.cs</DependentUpon>
     </EmbeddedResource>

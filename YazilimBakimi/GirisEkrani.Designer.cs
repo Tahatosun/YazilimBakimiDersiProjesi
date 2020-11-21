@@ -148,7 +148,7 @@
             this.txtBoxSifre.Location = new System.Drawing.Point(414, 237);
             this.txtBoxSifre.MaxLength = 32767;
             this.txtBoxSifre.Name = "txtBoxSifre";
-            this.txtBoxSifre.PasswordChar = '\0';
+            this.txtBoxSifre.PasswordChar = '*';
             this.txtBoxSifre.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxSifre.SelectedText = "";
             this.txtBoxSifre.SelectionLength = 0;
