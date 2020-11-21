@@ -43,6 +43,8 @@
             this.cmbBxSiparisiVerenBayi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSiparisiTamamla = new MetroFramework.Controls.MetroTile();
+            this.txtToplamFiyat = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUrunAdeti)).BeginInit();
             this.grpBxSiparisUrunleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSipariseAitUrunler)).BeginInit();
@@ -92,6 +94,7 @@
             // 
             // txtFiyat
             // 
+            this.txtFiyat.Enabled = false;
             this.txtFiyat.Location = new System.Drawing.Point(526, 103);
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(135, 20);
@@ -159,11 +162,11 @@
             // btnUrunuSipariseEkle
             // 
             this.btnUrunuSipariseEkle.ActiveControl = null;
-            this.btnUrunuSipariseEkle.Location = new System.Drawing.Point(703, 94);
+            this.btnUrunuSipariseEkle.Location = new System.Drawing.Point(696, 94);
             this.btnUrunuSipariseEkle.Name = "btnUrunuSipariseEkle";
             this.btnUrunuSipariseEkle.Size = new System.Drawing.Size(161, 39);
             this.btnUrunuSipariseEkle.TabIndex = 14;
-            this.btnUrunuSipariseEkle.Text = "EKLE";
+            this.btnUrunuSipariseEkle.Text = "ÜRÜNÜ EKLE";
             this.btnUrunuSipariseEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUrunuSipariseEkle.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnUrunuSipariseEkle.UseSelectable = true;
@@ -171,7 +174,7 @@
             // cmbBxSiparisiVerenBayi
             // 
             this.cmbBxSiparisiVerenBayi.FormattingEnabled = true;
-            this.cmbBxSiparisiVerenBayi.Location = new System.Drawing.Point(359, 634);
+            this.cmbBxSiparisiVerenBayi.Location = new System.Drawing.Point(151, 609);
             this.cmbBxSiparisiVerenBayi.Name = "cmbBxSiparisiVerenBayi";
             this.cmbBxSiparisiVerenBayi.Size = new System.Drawing.Size(230, 21);
             this.cmbBxSiparisiVerenBayi.TabIndex = 16;
@@ -179,7 +182,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(231, 637);
+            this.label4.Location = new System.Drawing.Point(23, 612);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 13);
             this.label4.TabIndex = 15;
@@ -188,20 +191,39 @@
             // btnSiparisiTamamla
             // 
             this.btnSiparisiTamamla.ActiveControl = null;
-            this.btnSiparisiTamamla.Location = new System.Drawing.Point(628, 616);
+            this.btnSiparisiTamamla.Location = new System.Drawing.Point(649, 600);
             this.btnSiparisiTamamla.Name = "btnSiparisiTamamla";
-            this.btnSiparisiTamamla.Size = new System.Drawing.Size(233, 39);
+            this.btnSiparisiTamamla.Size = new System.Drawing.Size(212, 39);
             this.btnSiparisiTamamla.TabIndex = 17;
             this.btnSiparisiTamamla.Text = "Siparişi Tamamla";
             this.btnSiparisiTamamla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiparisiTamamla.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnSiparisiTamamla.UseSelectable = true;
             // 
+            // txtToplamFiyat
+            // 
+            this.txtToplamFiyat.Enabled = false;
+            this.txtToplamFiyat.Location = new System.Drawing.Point(484, 609);
+            this.txtToplamFiyat.Name = "txtToplamFiyat";
+            this.txtToplamFiyat.Size = new System.Drawing.Size(135, 20);
+            this.txtToplamFiyat.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(408, 612);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Toplam Fiyat:";
+            // 
             // SiparisOlusturmaEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 678);
+            this.ClientSize = new System.Drawing.Size(878, 661);
+            this.Controls.Add(this.txtToplamFiyat);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSiparisiTamamla);
             this.Controls.Add(this.cmbBxSiparisiVerenBayi);
             this.Controls.Add(this.label4);
@@ -238,5 +260,7 @@
         private System.Windows.Forms.ComboBox cmbBxSiparisiVerenBayi;
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroTile btnSiparisiTamamla;
+        private System.Windows.Forms.TextBox txtToplamFiyat;
+        private System.Windows.Forms.Label label1;
     }
 }

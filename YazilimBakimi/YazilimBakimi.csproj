@@ -88,6 +88,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SendMail.cs" />
+    <Compile Include="SiparisDetayiGoruntulemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisDetayiGoruntulemeEkrani.Designer.cs">
+      <DependentUpon>SiparisDetayiGoruntulemeEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="SiparisOlusturmaEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SiparisDetayiGoruntulemeEkrani.resx">
+      <DependentUpon>SiparisDetayiGoruntulemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SiparisOlusturmaEkrani.resx">
       <DependentUpon>SiparisOlusturmaEkrani.cs</DependentUpon>
     </EmbeddedResource>
