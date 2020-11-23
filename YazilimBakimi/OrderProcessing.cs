@@ -59,7 +59,6 @@ namespace YazilimBakimi
             dataGridView.DataSource = siparisDetaylistesi;
         }
 
-
         public void SipariseUrunEkle(List<UrunModel> urunlist,List<SiparisDetayModel> siparisListesi, String urunAdi, String seciliUrun, String numUrunAdeti, float urunFiyat )
         {
             SiparisDetayModel eklenecekUrun = new SiparisDetayModel();       
@@ -69,8 +68,6 @@ namespace YazilimBakimi
             eklenecekUrun.DetayFiyat = urunFiyat*Convert.ToInt32(numUrunAdeti) ;
             siparisListesi.Add(eklenecekUrun);           
         }
-
-
 
         public void SiparisOlustur(String Bayi,float siparisTutarı,List<SiparisDetayModel> siparisListesi) {
 
@@ -163,11 +160,14 @@ namespace YazilimBakimi
 
         public void siparistenUrunSil(String siparisDetayId)
         {
-            sqlConnection.Connection().Open();
-            SqlCommand urunSil = new SqlCommand("DELETE tblSiparisDetay WHERE DetayID=@p1", sqlConnection.Connection());
-            urunSil.Parameters.AddWithValue("@p1", siparisDetayId);
-            urunSil.ExecuteNonQuery();
-            sqlConnection.Connection().Close();
+            if (siparisDetayId != "") {
+                sqlConnection.Connection().Open();
+                SqlCommand urunSil = new SqlCommand("DELETE tblSiparisDetay WHERE DetayID=@p1", sqlConnection.Connection());
+                urunSil.Parameters.AddWithValue("@p1", siparisDetayId);
+                urunSil.ExecuteNonQuery();
+                sqlConnection.Connection().Close();
+            }
+            
         }
 
         public void tutarGüncelle(String id)
@@ -195,6 +195,46 @@ namespace YazilimBakimi
 
         }
 
+        public SiparisDetayModel siparisDetayGetir(String detayId) {
+            SiparisDetayModel siparisDetay = new SiparisDetayModel();
+            sqlConnection.Connection().Open();
+            SqlCommand orderDetailId = new SqlCommand("select detayID,urunAd,urunAdet,detayFiyat from tblSiparisDetay INNER JOIN tblurunler ON tblSiparisDetay.urunID=tblurunler.urunID  WHERE detayID=@p1", sqlConnection.Connection());
+            orderDetailId.Parameters.AddWithValue("@p1", detayId);
+            SqlDataReader data = orderDetailId.ExecuteReader();
+            while (data.Read())
+            {
+                siparisDetay.UrunId = data[0].ToString();
+                siparisDetay.urunAdı1=data[1].ToString();
+                siparisDetay.UrunAdet = data[2].ToString();
+                siparisDetay.DetayFiyat = (float)Double.Parse(data[3].ToString());
+            }
+            sqlConnection.Connection().Close();
+
+            return siparisDetay;
+        }
+
+        public void siparisDetayGuncelle(String detayId,String adet,String siparisId) {
+
+
+            sqlConnection.Connection().Open();
+            SqlCommand urunguncelle = new SqlCommand("UPDATE tblSiparisDetay SET urunAdet = @p1, detayFiyat=(urunAdet*urunBirimFiyat) FROM tblSiparisDetay INNER JOIN tblurunler ON tblSiparisDetay.urunID = tblurunler.urunID WHERE detayID=@p0", sqlConnection.Connection());
+            urunguncelle.Parameters.AddWithValue("@p0",detayId);
+            urunguncelle.Parameters.AddWithValue("@p1",adet);
+
+            urunguncelle.ExecuteNonQuery();
+            urunguncelle.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+
+
+            sqlConnection.Connection().Open();
+            SqlCommand siparistutar = new SqlCommand("UPDATE tblSiparisler SET siparisTutar =(select sum(detayFiyat) from tblSiparisDetay where siparisID=@p1) WHERE siparisID=@p1", sqlConnection.Connection());
+            siparistutar.Parameters.AddWithValue("@p1",siparisId);
+
+            siparistutar.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+
+
+        }
 
 
     }

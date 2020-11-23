@@ -22,6 +22,7 @@ namespace YazilimBakimi
         List<UrunModel> urunListesi = new List<UrunModel>();
         List<Bayi> bayiList = new List<Bayi>();
         OrderProcessing orderProcessing = new OrderProcessing();
+        public DataGridView dataGridViewSiparisler = new DataGridView();
 
        
 
@@ -65,8 +66,15 @@ namespace YazilimBakimi
         }
 
         private void btnSiparisiTamamla_Click(object sender, EventArgs e)
-        {                  
-            orderProcessing.SiparisOlustur(bayiList[cmbBxSiparisiVerenBayi.SelectedIndex].BayiId, orderProcessing.siparisTutarıHesapla(siparisListesi),siparisListesi);            
+        {
+            if (cmbBxSiparisiVerenBayi.Text != "")
+            {
+                orderProcessing.SiparisOlustur(bayiList[cmbBxSiparisiVerenBayi.SelectedIndex].BayiId, orderProcessing.siparisTutarıHesapla(siparisListesi), siparisListesi);
+                orderProcessing.siparisleriGetir(dataGridViewSiparisler);
+                this.Close();
+            }
+
+
         }
     }
 }

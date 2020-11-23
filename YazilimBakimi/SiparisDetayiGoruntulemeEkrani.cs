@@ -15,6 +15,7 @@ namespace YazilimBakimi
         public String siparisId;
         OrderProcessing orderProcessing = new OrderProcessing();
         List<SiparisDetayModel> siparisDetayList = new List<SiparisDetayModel>();
+        public DataGridView dataGridViewsiparisler = new DataGridView();
 
 
         public SiparisDetayiGoruntulemeEkrani()
@@ -30,6 +31,7 @@ namespace YazilimBakimi
         private void dataGridSiparisDetayUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             String detayId = dataGridSiparisDetayUrunler.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtSiparisteGuncellenecekUrunID.Text = detayId;
             txtSiparistenSilinecekUrunID.Text = detayId;
         }
 
@@ -44,14 +46,12 @@ namespace YazilimBakimi
 
         private void btnSiparisiGuncelle_Click(object sender, EventArgs e)
         {
-            List<SiparisDetayModel> list = new List<SiparisDetayModel>();
-            
-            
-
-
-
-
-
+            SiparisDetayGuncelle siparisDetayGuncelle = new SiparisDetayGuncelle();
+            siparisDetayGuncelle.detayId = txtSiparisteGuncellenecekUrunID.Text;
+            siparisDetayGuncelle.dataGridSiparisDetay = dataGridSiparisDetayUrunler;
+            siparisDetayGuncelle.siparisId = siparisId;
+            siparisDetayGuncelle.dataGridViewsiparisler = dataGridViewsiparisler;
+            siparisDetayGuncelle.Show();          
         }
     }
 }

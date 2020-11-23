@@ -80,3 +80,4 @@ D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\de\DevExpress.Xpo.
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisDetayGuncelle.resources

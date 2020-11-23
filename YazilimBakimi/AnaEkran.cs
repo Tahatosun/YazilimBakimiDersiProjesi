@@ -126,11 +126,12 @@ namespace YazilimBakimi
         private void btnSiparisOlustur_Click(object sender, EventArgs e)
         {
             SiparisOlusturmaEkrani siparisOlusturmaEkrani = new SiparisOlusturmaEkrani();
+            siparisOlusturmaEkrani.dataGridViewSiparisler = dataGridSiparisler;
             siparisOlusturmaEkrani.Show();
         }
 
        
-       
+  
 
         private void dataGridSiparisler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -140,9 +141,13 @@ namespace YazilimBakimi
 
         private void btnSiparisDetayGor_Click(object sender, EventArgs e)
         {
-            SiparisDetayiGoruntulemeEkrani siparisDetayiGoruntulemeEkrani = new SiparisDetayiGoruntulemeEkrani();
-            siparisDetayiGoruntulemeEkrani.siparisId = txtSiparisID.Text;
-            siparisDetayiGoruntulemeEkrani.Show();
+            if (txtSiparisID.Text != "") {
+                SiparisDetayiGoruntulemeEkrani siparisDetayiGoruntulemeEkrani = new SiparisDetayiGoruntulemeEkrani();
+                siparisDetayiGoruntulemeEkrani.siparisId = txtSiparisID.Text;
+                siparisDetayiGoruntulemeEkrani.dataGridViewsiparisler = dataGridSiparisler;
+                siparisDetayiGoruntulemeEkrani.Show();
+            }
+            
         }
     }
 }
