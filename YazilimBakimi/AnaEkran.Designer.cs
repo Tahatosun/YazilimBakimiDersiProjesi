@@ -63,13 +63,13 @@
             this.grpBayiler = new System.Windows.Forms.GroupBox();
             this.dataGridBayiler = new MetroFramework.Controls.MetroGrid();
             this.tpUrunSatisYonetimi = new System.Windows.Forms.TabPage();
-            this.grpBxSiparisler = new System.Windows.Forms.GroupBox();
-            this.dataGridSiparisler = new MetroFramework.Controls.MetroGrid();
             this.grpBxSiparisDetayGor = new System.Windows.Forms.GroupBox();
             this.txtSiparisID = new System.Windows.Forms.TextBox();
             this.lblSiparisID = new System.Windows.Forms.Label();
             this.btnSiparisDetayGor = new MetroFramework.Controls.MetroTile();
             this.btnSiparisOlustur = new MetroFramework.Controls.MetroTile();
+            this.grpBxSiparisler = new System.Windows.Forms.GroupBox();
+            this.dataGridSiparisler = new MetroFramework.Controls.MetroGrid();
             this.tabControl.SuspendLayout();
             this.tpUrunYonetimi.SuspendLayout();
             this.grpBxUrunSil.SuspendLayout();
@@ -82,9 +82,9 @@
             this.grpBayiler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBayiler)).BeginInit();
             this.tpUrunSatisYonetimi.SuspendLayout();
+            this.grpBxSiparisDetayGor.SuspendLayout();
             this.grpBxSiparisler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSiparisler)).BeginInit();
-            this.grpBxSiparisDetayGor.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -224,6 +224,7 @@
             this.dataGridUrunler.AllowUserToAddRows = false;
             this.dataGridUrunler.AllowUserToDeleteRows = false;
             this.dataGridUrunler.AllowUserToResizeRows = false;
+            this.dataGridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridUrunler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridUrunler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -399,6 +400,7 @@
             this.dataGridBayiler.AllowUserToAddRows = false;
             this.dataGridBayiler.AllowUserToDeleteRows = false;
             this.dataGridBayiler.AllowUserToResizeRows = false;
+            this.dataGridBayiler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridBayiler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridBayiler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridBayiler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -454,65 +456,6 @@
             this.tpUrunSatisYonetimi.TabIndex = 2;
             this.tpUrunSatisYonetimi.Text = "Ürün Satış Yönetimi";
             // 
-            // grpBxSiparisler
-            // 
-            this.grpBxSiparisler.BackColor = System.Drawing.Color.Transparent;
-            this.grpBxSiparisler.Controls.Add(this.dataGridSiparisler);
-            this.grpBxSiparisler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpBxSiparisler.Location = new System.Drawing.Point(8, 20);
-            this.grpBxSiparisler.Name = "grpBxSiparisler";
-            this.grpBxSiparisler.Size = new System.Drawing.Size(841, 640);
-            this.grpBxSiparisler.TabIndex = 3;
-            this.grpBxSiparisler.TabStop = false;
-            this.grpBxSiparisler.Text = "SİPARİŞLER";
-            // 
-            // dataGridSiparisler
-            // 
-            this.dataGridSiparisler.AllowUserToAddRows = false;
-            this.dataGridSiparisler.AllowUserToDeleteRows = false;
-            this.dataGridSiparisler.AllowUserToResizeRows = false;
-            this.dataGridSiparisler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridSiparisler.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridSiparisler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridSiparisler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridSiparisler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridSiparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridSiparisler.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridSiparisler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridSiparisler.EnableHeadersVisualStyles = false;
-            this.dataGridSiparisler.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dataGridSiparisler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridSiparisler.Location = new System.Drawing.Point(3, 19);
-            this.dataGridSiparisler.Name = "dataGridSiparisler";
-            this.dataGridSiparisler.ReadOnly = true;
-            this.dataGridSiparisler.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridSiparisler.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridSiparisler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridSiparisler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridSiparisler.Size = new System.Drawing.Size(835, 618);
-            this.dataGridSiparisler.TabIndex = 0;
-            // 
             // grpBxSiparisDetayGor
             // 
             this.grpBxSiparisDetayGor.BackColor = System.Drawing.Color.Transparent;
@@ -553,6 +496,7 @@
             this.btnSiparisDetayGor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiparisDetayGor.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnSiparisDetayGor.UseSelectable = true;
+            this.btnSiparisDetayGor.Click += new System.EventHandler(this.btnSiparisDetayGor_Click);
             // 
             // btnSiparisOlustur
             // 
@@ -565,6 +509,69 @@
             this.btnSiparisOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiparisOlustur.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnSiparisOlustur.UseSelectable = true;
+            this.btnSiparisOlustur.Click += new System.EventHandler(this.btnSiparisOlustur_Click);
+            // 
+            // grpBxSiparisler
+            // 
+            this.grpBxSiparisler.BackColor = System.Drawing.Color.Transparent;
+            this.grpBxSiparisler.Controls.Add(this.dataGridSiparisler);
+            this.grpBxSiparisler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.grpBxSiparisler.Location = new System.Drawing.Point(8, 20);
+            this.grpBxSiparisler.Name = "grpBxSiparisler";
+            this.grpBxSiparisler.Size = new System.Drawing.Size(841, 640);
+            this.grpBxSiparisler.TabIndex = 3;
+            this.grpBxSiparisler.TabStop = false;
+            this.grpBxSiparisler.Text = "SİPARİŞLER";
+            // 
+            // dataGridSiparisler
+            // 
+            this.dataGridSiparisler.AllowUserToAddRows = false;
+            this.dataGridSiparisler.AllowUserToDeleteRows = false;
+            this.dataGridSiparisler.AllowUserToResizeRows = false;
+            this.dataGridSiparisler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridSiparisler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridSiparisler.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridSiparisler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridSiparisler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridSiparisler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridSiparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridSiparisler.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridSiparisler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridSiparisler.EnableHeadersVisualStyles = false;
+            this.dataGridSiparisler.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridSiparisler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridSiparisler.Location = new System.Drawing.Point(3, 19);
+            this.dataGridSiparisler.MultiSelect = false;
+            this.dataGridSiparisler.Name = "dataGridSiparisler";
+            this.dataGridSiparisler.ReadOnly = true;
+            this.dataGridSiparisler.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridSiparisler.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridSiparisler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridSiparisler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridSiparisler.Size = new System.Drawing.Size(835, 618);
+            this.dataGridSiparisler.TabIndex = 0;
+            this.dataGridSiparisler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSiparisler_CellClick);
             // 
             // AnaEkran
             // 
@@ -591,10 +598,10 @@
             this.grpBayiler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBayiler)).EndInit();
             this.tpUrunSatisYonetimi.ResumeLayout(false);
-            this.grpBxSiparisler.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSiparisler)).EndInit();
             this.grpBxSiparisDetayGor.ResumeLayout(false);
             this.grpBxSiparisDetayGor.PerformLayout();
+            this.grpBxSiparisler.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSiparisler)).EndInit();
             this.ResumeLayout(false);
 
         }

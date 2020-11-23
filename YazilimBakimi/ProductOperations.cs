@@ -46,18 +46,18 @@ namespace YazilimBakimi
 
         public void UrunleriGetir(DataGridView datagrid) {
 
-            List<Urun> urunlerList=new List<Urun>();
+            List<UrunModel> urunlerList=new List<UrunModel>();
 
             sqlConnection.Connection().Open();
             SqlCommand urungetir = new SqlCommand("select * from tblurunler", sqlConnection.Connection());
             SqlDataReader data = urungetir.ExecuteReader();
             while (data.Read())
             {
-                Urun urun = new Urun();
+                UrunModel urun = new UrunModel();
                 urun.UrunID = data[0].ToString();
                 urun.UrunAdi = data[1].ToString();
                 urun.urunStok = data[2].ToString();
-                urun.urunBirimFiyat = data[3].ToString();
+                urun.urunBirimFiyat = (float)Double.Parse(data[3].ToString());
                 urunlerList.Add(urun);
             }
             sqlConnection.Connection().Close();
@@ -66,8 +66,8 @@ namespace YazilimBakimi
         
         }
 
-        public Urun urunGetir(String Id) {
-            Urun seciliUrun=new Urun();
+        public UrunModel urunGetir(String Id) {
+            UrunModel seciliUrun=new UrunModel();
 
             sqlConnection.Connection().Open();
             SqlCommand seciliUrungetir = new SqlCommand("select * from tblurunler where urunID = @p1", sqlConnection.Connection());
@@ -78,7 +78,7 @@ namespace YazilimBakimi
                 seciliUrun.UrunID = data[0].ToString();
                 seciliUrun.UrunAdi = data[1].ToString();
                 seciliUrun.urunStok = data[2].ToString();
-                seciliUrun.urunBirimFiyat = data[3].ToString();
+                seciliUrun.urunBirimFiyat = (float)data[3];
 
             }
             sqlConnection.Connection().Close();

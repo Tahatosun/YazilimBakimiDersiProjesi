@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -83,6 +85,7 @@
       <DependentUpon>GirisEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\KullaniciModel.cs" />
+    <Compile Include="OrderProcessing.cs" />
     <Compile Include="PasswordEncryption.cs" />
     <Compile Include="ProductOperations.cs" />
     <Compile Include="Program.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="SiparisDetayiGoruntulemeEkrani.Designer.cs">
       <DependentUpon>SiparisDetayiGoruntulemeEkrani.cs</DependentUpon>
     </Compile>
+    <Compile Include="SiparisModel.cs" />
     <Compile Include="SiparisOlusturmaEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +105,7 @@
       <DependentUpon>SiparisOlusturmaEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="SQlConnection.cs" />
+    <Compile Include="SiparisDetayModel.cs" />
     <Compile Include="UrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,7 +118,7 @@
     <Compile Include="UrunGuncelle.Designer.cs">
       <DependentUpon>UrunGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Urun.cs" />
+    <Compile Include="UrunModel.cs" />
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>

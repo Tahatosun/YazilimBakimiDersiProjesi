@@ -15,7 +15,7 @@ namespace YazilimBakimi
         ProductOperations productOperations = new ProductOperations();
         public int urunID;
         public DataGridView urunelerDataGrid;
-        Urun urun = new Urun();
+        UrunModel urun = new UrunModel();
         public UrunGuncelle()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace YazilimBakimi
             txtUrunGuncelleUrunID.Text = urun.UrunID;
             txtBxUrunAdiGuncelle.Text = urun.UrunAdi;
             txtBxStokAdediGuncelle.Text = urun.urunStok;
-            txtBxBirimFiyatGuncelle.Text = urun.urunBirimFiyat;
+            txtBxBirimFiyatGuncelle.Text = urun.urunBirimFiyat.ToString();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

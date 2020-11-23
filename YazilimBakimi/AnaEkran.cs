@@ -14,6 +14,8 @@ namespace YazilimBakimi
     {
         ProductOperations productOperation = new ProductOperations();
         DealerOperations dealerOperations = new DealerOperations();
+        OrderProcessing orderProcessing = new OrderProcessing();
+        List<SiparisDetayModel> siparisListesi = new List<SiparisDetayModel>();
         public AnaEkran()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace YazilimBakimi
         {
             productOperation.UrunleriGetir(dataGridUrunler);
             dealerOperations.bayileriGetir(dataGridBayiler);
+            orderProcessing.siparisleriGetir(dataGridSiparisler);
             
             //dataGridUrunler.DataSource = productOperation.UrunleriGetir();
         }
@@ -118,6 +121,25 @@ namespace YazilimBakimi
         {
             dealerOperations.BayiSil(txtBayiSilID.Text);
             dealerOperations.bayileriGetir(dataGridBayiler);
+        }
+
+        private void btnSiparisOlustur_Click(object sender, EventArgs e)
+        {
+            SiparisOlusturmaEkrani siparisOlusturmaEkrani = new SiparisOlusturmaEkrani();
+            siparisOlusturmaEkrani.Show();
+        }
+
+        private void dataGridSiparisler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String selectedId = dataGridSiparisler.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtSiparisID.Text = selectedId;          
+        }
+
+        private void btnSiparisDetayGor_Click(object sender, EventArgs e)
+        {
+            SiparisDetayiGoruntulemeEkrani siparisDetayiGoruntulemeEkrani = new SiparisDetayiGoruntulemeEkrani();
+            siparisDetayiGoruntulemeEkrani.siparisId = txtSiparisID.Text;
+            siparisDetayiGoruntulemeEkrani.Show();
         }
     }
 }
