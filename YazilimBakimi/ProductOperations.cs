@@ -13,7 +13,7 @@ namespace YazilimBakimi
         SQlConnection sqlConnection = new SQlConnection();
 
 
-        public void UrunEkle(String urunAd,long stok,long birimFiyat) {
+        public void UrunEkle(String urunAd,long stok,Double birimFiyat) {
 
             sqlConnection.Connection().Open();
             SqlCommand productAdd = new SqlCommand(" insert into tblurunler (urunAd,urunStok,urunBirimFiyat) values(@P1,@P2,@P3)", sqlConnection.Connection());
@@ -109,6 +109,25 @@ namespace YazilimBakimi
             urunSil.ExecuteNonQuery();
             sqlConnection.Connection().Close();
 
+        }
+
+
+        public void urunStokGuncelleId(String UrunId,String miktar) {
+            sqlConnection.Connection().Open();
+            SqlCommand urunguncelle = new SqlCommand("UPDATE tblurunler SET urunStok+=@p1 WHERE urunID=@p0", sqlConnection.Connection());
+            urunguncelle.Parameters.AddWithValue("@p0", UrunId);
+            urunguncelle.Parameters.AddWithValue("@p1", miktar);        
+            urunguncelle.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+        }
+        public void urunStokGuncelleAd(String UrunId, String miktar)
+        {
+            sqlConnection.Connection().Open();
+            SqlCommand urunguncelle = new SqlCommand("UPDATE tblurunler SET urunStok+=@p1 WHERE urunAd=@p0", sqlConnection.Connection());
+            urunguncelle.Parameters.AddWithValue("@p0", UrunId);
+            urunguncelle.Parameters.AddWithValue("@p1", miktar);
+            urunguncelle.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
         }
 
 

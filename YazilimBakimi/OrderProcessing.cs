@@ -13,6 +13,7 @@ namespace YazilimBakimi
         public String sipariId;
         SQlConnection sqlConnection = new SQlConnection();
         List<SiparisModel> siparisList = new List<SiparisModel>();
+        ProductOperations productOperations = new ProductOperations();
 
 
 
@@ -69,7 +70,7 @@ namespace YazilimBakimi
             siparisListesi.Add(eklenecekUrun);           
         }
 
-        public void SiparisOlustur(String Bayi,float siparisTutarı,List<SiparisDetayModel> siparisListesi) {
+        public void SiparisOlustur(String Bayi,Double siparisTutarı,List<SiparisDetayModel> siparisListesi) {
 
            
             sqlConnection.Connection().Open();
@@ -102,20 +103,22 @@ namespace YazilimBakimi
                 orderDetailAdd.ExecuteNonQuery();
                 sqlConnection.Connection().Close();
 
+                productOperations.urunStokGuncelleId(model.UrunId, "-"+model.UrunAdet);
+
             }
          
      
           
         }
 
-        public float siparisTutarıHesapla(List<SiparisDetayModel> siparisListesi)
+        public Double siparisTutarıHesapla(List<SiparisDetayModel> siparisListesi)
         {
-            float siparisTutarı = 0;
+            Double siparisTutari = 0;
             foreach (SiparisDetayModel siparis in siparisListesi)
             {
-                siparisTutarı += Convert.ToInt32(siparis.DetayFiyat);
+                siparisTutari += Double.Parse(siparis.DetayFiyat.ToString());
             }
-            return siparisTutarı;
+            return siparisTutari;
         }
 
         public void siparisleriGetir(DataGridView dataGridView)
@@ -172,7 +175,7 @@ namespace YazilimBakimi
 
         public void tutarGüncelle(String id)
         {
-
+            
             float guncelTutar = 0;
             sqlConnection.Connection().Open();
             SqlCommand guncelTutarıHesepla = new SqlCommand("select SUM(urunAdet*urunBirimFiyat) from tblSiparisDetay INNER JOIN tblurunler on tblSiparisDetay.urunID=tblurunler.urunID WHERE siparisID=@P1", sqlConnection.Connection());
@@ -180,10 +183,14 @@ namespace YazilimBakimi
             SqlDataReader data = guncelTutarıHesepla.ExecuteReader();
             while (data.Read())
             {
-                guncelTutar = (float)Double.Parse(data[0].ToString());
+                if (data[0].ToString() != "") {
+                    MessageBox.Show(data[0].ToString());
+                    guncelTutar = (float)Double.Parse(data[0].ToString());
+                }                
             }
 
             sqlConnection.Connection().Close();
+
 
 
             sqlConnection.Connection().Open();
@@ -236,6 +243,14 @@ namespace YazilimBakimi
 
         }
 
+        public void SiparisSil(string id) {
+            sqlConnection.Connection().Open();
+            SqlCommand urunSil = new SqlCommand("DELETE tblSiparisler WHERE siparisID=@p1", sqlConnection.Connection());
+            urunSil.Parameters.AddWithValue("@p1", id);
+            urunSil.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+        }
+       
 
     }
 }

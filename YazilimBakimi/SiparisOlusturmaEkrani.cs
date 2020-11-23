@@ -36,7 +36,7 @@ namespace YazilimBakimi
         {      
             seciliUrun = urunListesi[cmbBxUrunler.SelectedIndex];
             numUrunAdeti.Maximum = Convert.ToInt32(seciliUrun.urunStok);
-            txtFiyat.Text = (Convert.ToInt32(seciliUrun.urunBirimFiyat) * Convert.ToInt32(numUrunAdeti.Value)).ToString();
+            txtFiyat.Text = (Double.Parse(seciliUrun.urunBirimFiyat.ToString()) * Convert.ToInt32(numUrunAdeti.Value)).ToString();
             if (Convert.ToInt32(seciliUrun.urunStok) > 0)
             {
                 numUrunAdeti.Value = 1;
@@ -49,7 +49,7 @@ namespace YazilimBakimi
 
         private void numUrunAdeti_ValueChanged(object sender, EventArgs e)
         {           
-            txtFiyat.Text = (Convert.ToInt32(seciliUrun.urunBirimFiyat) * Convert.ToInt32(numUrunAdeti.Value)).ToString();
+            txtFiyat.Text = (Double.Parse(seciliUrun.urunBirimFiyat.ToString()) * Convert.ToInt32(numUrunAdeti.Value)).ToString();
 
             
         }
@@ -62,6 +62,7 @@ namespace YazilimBakimi
                                                     numUrunAdeti.Value.ToString(), urunListesi[cmbBxUrunler.SelectedIndex].urunBirimFiyat);
                 txtToplamFiyat.Text = orderProcessing.siparisTutarıHesapla(siparisListesi).ToString();              
             }
+            dataGridSipariseAitUrunler.DataSource = null;
             orderProcessing.dataGridSipariseAitUrunleriGetir(dataGridSipariseAitUrunler, siparisListesi);
         }
 

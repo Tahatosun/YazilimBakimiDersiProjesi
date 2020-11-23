@@ -102,11 +102,9 @@
             // 
             this.txtBxBirimFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtBxBirimFiyat.Location = new System.Drawing.Point(158, 183);
-            this.txtBxBirimFiyat.Mask = "0000000000000000000000";
             this.txtBxBirimFiyat.Name = "txtBxBirimFiyat";
             this.txtBxBirimFiyat.Size = new System.Drawing.Size(171, 24);
             this.txtBxBirimFiyat.TabIndex = 11;
-            this.txtBxBirimFiyat.ValidatingType = typeof(int);
             // 
             // UrunEkle
             // 

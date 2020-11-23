@@ -14,8 +14,11 @@ namespace YazilimBakimi
     {
         public String siparisId;
         OrderProcessing orderProcessing = new OrderProcessing();
+        ProductOperations productOperations = new ProductOperations();
         List<SiparisDetayModel> siparisDetayList = new List<SiparisDetayModel>();
         public DataGridView dataGridViewsiparisler = new DataGridView();
+        String secilisurunad;
+        String seciliurunadet;
 
 
         public SiparisDetayiGoruntulemeEkrani()
@@ -31,16 +34,23 @@ namespace YazilimBakimi
         private void dataGridSiparisDetayUrunler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             String detayId = dataGridSiparisDetayUrunler.Rows[e.RowIndex].Cells[0].Value.ToString();
+            secilisurunad = dataGridSiparisDetayUrunler.Rows[e.RowIndex].Cells[1].Value.ToString();
+            seciliurunadet = dataGridSiparisDetayUrunler.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtSiparisteGuncellenecekUrunID.Text = detayId;
             txtSiparistenSilinecekUrunID.Text = detayId;
         }
 
         private void btnSiparistenUrunuSil_Click(object sender, EventArgs e)
         {
-            orderProcessing.siparistenUrunSil(txtSiparistenSilinecekUrunID.Text);
-            orderProcessing.tutarGüncelle(siparisId);
-            dataGridSiparisDetayUrunler.DataSource = null;
-            orderProcessing.siparisDeteylariGetir(dataGridSiparisDetayUrunler, siparisId,siparisDetayList);
+            if (txtSiparistenSilinecekUrunID.Text != "") {
+                productOperations.urunStokGuncelleAd(secilisurunad, seciliurunadet);
+                orderProcessing.siparistenUrunSil(txtSiparistenSilinecekUrunID.Text);
+                orderProcessing.tutarGüncelle(siparisId);
+                dataGridSiparisDetayUrunler.DataSource = null;
+                orderProcessing.siparisDeteylariGetir(dataGridSiparisDetayUrunler, siparisId, siparisDetayList);
+                dataGridViewsiparisler.DataSource = null;
+                orderProcessing.siparisleriGetir(dataGridViewsiparisler);
+            }
             
         }
 

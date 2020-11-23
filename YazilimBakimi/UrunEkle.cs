@@ -29,9 +29,9 @@ namespace YazilimBakimi
         {
             if (txtBxBirimFiyat.Text != "" && txtBxStokAdedi.Text != "" && txtBxUrunAdi.Text != "")
             {
-                if (Convert.ToInt64(txtBxStokAdedi.Text) >= 0 && Convert.ToInt64(txtBxBirimFiyat.Text) > 0)
+                if (Convert.ToInt64(txtBxStokAdedi.Text) >= 0 && Double.Parse(txtBxBirimFiyat.Text) > 0)
                 {
-                    productOperations.UrunEkle(txtBxUrunAdi.Text, Convert.ToInt64(txtBxStokAdedi.Text), Convert.ToInt64(txtBxBirimFiyat.Text));
+                    productOperations.UrunEkle(txtBxUrunAdi.Text, Convert.ToInt64(txtBxStokAdedi.Text), Double.Parse(txtBxBirimFiyat.Text));
                     txtBxBirimFiyat.Text = "";
                     txtBxStokAdedi.Text = "";
                     txtBxUrunAdi.Text = "";
