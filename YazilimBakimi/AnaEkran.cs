@@ -14,6 +14,7 @@ namespace YazilimBakimi
     {
         ProductOperations productOperation = new ProductOperations();
         DealerOperations dealerOperations = new DealerOperations();
+        List<SiparisDetayModel> siparisListesi = new List<SiparisDetayModel>();
         public AnaEkran()
         {
             InitializeComponent();
@@ -118,6 +119,12 @@ namespace YazilimBakimi
         {
             dealerOperations.BayiSil(txtBayiSilID.Text);
             dealerOperations.bayileriGetir(dataGridBayiler);
+        }
+
+        private void btnSiparisOlustur_Click(object sender, EventArgs e)
+        {
+            SiparisOlusturmaEkrani siparisOlusturmaEkrani = new SiparisOlusturmaEkrani();
+            siparisOlusturmaEkrani.Show();
         }
     }
 }

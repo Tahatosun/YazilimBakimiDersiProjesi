@@ -66,3 +66,5 @@ C:\Users\tahat\OneDrive\Masaüstü\Yeni klasör\YazilimBakimiDersiProjesi\Yazili
 C:\Users\tahat\OneDrive\Masaüstü\Yeni klasör\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.BayiGuncelle.resources
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.BayiEkle.resources
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.BayiGuncelle.resources
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisDetayiGoruntulemeEkrani.resources
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisOlusturmaEkrani.resources

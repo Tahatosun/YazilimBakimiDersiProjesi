@@ -83,6 +83,7 @@
       <DependentUpon>GirisEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\KullaniciModel.cs" />
+    <Compile Include="OrderProcessing.cs" />
     <Compile Include="PasswordEncryption.cs" />
     <Compile Include="ProductOperations.cs" />
     <Compile Include="Program.cs" />
@@ -101,6 +102,7 @@
       <DependentUpon>SiparisOlusturmaEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="SQlConnection.cs" />
+    <Compile Include="SiparisDetayModel.cs" />
     <Compile Include="UrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,7 +115,7 @@
     <Compile Include="UrunGuncelle.Designer.cs">
       <DependentUpon>UrunGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Urun.cs" />
+    <Compile Include="UrunModel.cs" />
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>
