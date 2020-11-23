@@ -68,3 +68,15 @@ D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.Bayi
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.BayiGuncelle.resources
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisDetayiGoruntulemeEkrani.resources
 D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisOlusturmaEkrani.resources
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\DevExpress.Data.v19.1.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\DevExpress.Xpo.v19.1.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\DevExpress.Xpo.v19.1.xml
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll

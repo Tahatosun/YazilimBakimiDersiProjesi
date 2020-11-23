@@ -12,7 +12,9 @@ namespace YazilimBakimi
     {
         public String sipariId;
         SQlConnection sqlConnection = new SQlConnection();
-        
+        List<SiparisModel> siparisList = new List<SiparisModel>();
+
+
 
         public void UrunlerComboboxItemsAdd(ComboBox urunlerComboBox,List<UrunModel> urunlist)
         {
@@ -119,6 +121,79 @@ namespace YazilimBakimi
             return siparisTutarı;
         }
 
+        public void siparisleriGetir(DataGridView dataGridView)
+        {
+            sqlConnection.Connection().Open();
+            SqlCommand urungetir = new SqlCommand("select siparisID,bayiad,siparisTarih,siparisTutar from tblSiparisler INNER JOIN tblBayiler ON tblSiparisler.bayiID =tblBayiler.bayiID", sqlConnection.Connection());
+            SqlDataReader data = urungetir.ExecuteReader();
+            while (data.Read())
+            {
+                SiparisModel siparis = new SiparisModel();
+                siparis.SiparisId = data[0].ToString();
+                siparis.BayiId = data[1].ToString();
+                siparis.SiparisTarihi = Convert.ToDateTime(data[2]);
+                siparis.SiparisTutari = (float)Double.Parse(data[3].ToString());
+                siparisList.Add(siparis);
+            }
+            dataGridView.DataSource = siparisList;
+            sqlConnection.Connection().Close();
+        }
+
+        public void siparisDeteylariGetir(DataGridView dataGridView, String siparisId, List<SiparisDetayModel> list)
+        {
+
+            list.Clear();
+            sqlConnection.Connection().Open();
+            SqlCommand siparisDetayGetir = new SqlCommand("select detayID,urunAd,urunAdet,detayFiyat from tblSiparisDetay INNER JOIN tblurunler on tblSiparisDetay.urunID=tblurunler.urunID WHERE siparisID=@p1", sqlConnection.Connection());
+            siparisDetayGetir.Parameters.AddWithValue("@p1", siparisId);
+            SqlDataReader data = siparisDetayGetir.ExecuteReader();
+            while (data.Read())
+            {
+                SiparisDetayModel siparisDetay = new SiparisDetayModel();
+                siparisDetay.UrunId = data[0].ToString();
+                siparisDetay.urunAdı1 = data[1].ToString();
+                siparisDetay.UrunAdet = data[2].ToString();
+                siparisDetay.DetayFiyat = (float)Double.Parse(data[3].ToString());
+                list.Add(siparisDetay);
+            }
+            dataGridView.DataSource = list;
+            sqlConnection.Connection().Close();
+
+        }
+
+        public void siparistenUrunSil(String siparisDetayId)
+        {
+            sqlConnection.Connection().Open();
+            SqlCommand urunSil = new SqlCommand("DELETE tblSiparisDetay WHERE DetayID=@p1", sqlConnection.Connection());
+            urunSil.Parameters.AddWithValue("@p1", siparisDetayId);
+            urunSil.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+        }
+
+        public void tutarGüncelle(String id)
+        {
+
+            float guncelTutar = 0;
+            sqlConnection.Connection().Open();
+            SqlCommand guncelTutarıHesepla = new SqlCommand("select SUM(urunAdet*urunBirimFiyat) from tblSiparisDetay INNER JOIN tblurunler on tblSiparisDetay.urunID=tblurunler.urunID WHERE siparisID=@P1", sqlConnection.Connection());
+            guncelTutarıHesepla.Parameters.AddWithValue("@P1", Convert.ToInt32(id));
+            SqlDataReader data = guncelTutarıHesepla.ExecuteReader();
+            while (data.Read())
+            {
+                guncelTutar = (float)Double.Parse(data[0].ToString());
+            }
+
+            sqlConnection.Connection().Close();
+
+
+            sqlConnection.Connection().Open();
+            SqlCommand bayiGuncelle = new SqlCommand("UPDATE tblSiparisler SET siparisTutar=@P1 WHERE siparisID=@P2", sqlConnection.Connection());
+            bayiGuncelle.Parameters.AddWithValue("@P1", guncelTutar.ToString());
+            bayiGuncelle.Parameters.AddWithValue("@P2", id);
+            bayiGuncelle.ExecuteNonQuery();
+            sqlConnection.Connection().Close();
+
+        }
 
 
 

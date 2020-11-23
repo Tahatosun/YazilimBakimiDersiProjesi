@@ -78,7 +78,7 @@ namespace YazilimBakimi
                 seciliUrun.UrunID = data[0].ToString();
                 seciliUrun.UrunAdi = data[1].ToString();
                 seciliUrun.urunStok = data[2].ToString();
-                seciliUrun.urunBirimFiyat = (float)data[3];
+                seciliUrun.urunBirimFiyat = (float)Double.Parse(data[3].ToString());
 
             }
             sqlConnection.Connection().Close();

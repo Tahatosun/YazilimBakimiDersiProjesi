@@ -494,6 +494,7 @@
             this.btnSiparisDetayGor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSiparisDetayGor.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnSiparisDetayGor.UseSelectable = true;
+            this.btnSiparisDetayGor.Click += new System.EventHandler(this.btnSiparisDetayGor_Click);
             // 
             // btnSiparisOlustur
             // 
@@ -566,6 +567,7 @@
             this.dataGridSiparisler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridSiparisler.Size = new System.Drawing.Size(835, 618);
             this.dataGridSiparisler.TabIndex = 0;
+            this.dataGridSiparisler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSiparisler_CellClick);
             // 
             // AnaEkran
             // 

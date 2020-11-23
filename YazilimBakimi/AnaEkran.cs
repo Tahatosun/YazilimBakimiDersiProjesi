@@ -129,10 +129,13 @@ namespace YazilimBakimi
             siparisOlusturmaEkrani.Show();
         }
 
+       
+       
+
         private void dataGridSiparisler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             String selectedId = dataGridSiparisler.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtSiparisID.Text = selectedId;          
+            txtSiparisID.Text = selectedId;
         }
 
         private void btnSiparisDetayGor_Click(object sender, EventArgs e)
