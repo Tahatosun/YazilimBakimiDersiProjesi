@@ -179,7 +179,7 @@ namespace YazilimBakimi
             sqlConnection.Connection().Close();
 
 
-            sqlConnection.Connection().Open();
+           sqlConnection.Connection().Open();
                 SqlCommand bayiGuncelle = new SqlCommand("UPDATE tblSiparisler SET siparisTutar=@P1 WHERE siparisID=@P2", sqlConnection.Connection());
                 bayiGuncelle.Parameters.AddWithValue("@P1", guncelTutar.ToString());
                 bayiGuncelle.Parameters.AddWithValue("@P2", id);

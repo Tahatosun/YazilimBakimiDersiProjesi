@@ -45,8 +45,9 @@ namespace YazilimBakimi
         private void btnSiparisiGuncelle_Click(object sender, EventArgs e)
         {
             List<SiparisDetayModel> list = new List<SiparisDetayModel>();
+            
+            
 
-          
 
 
 
