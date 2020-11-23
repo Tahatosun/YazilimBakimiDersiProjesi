@@ -118,6 +118,7 @@
             // 
             // dataGridSipariseAitUrunler
             // 
+            this.dataGridSipariseAitUrunler.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock;
             this.dataGridSipariseAitUrunler.AllowUserToAddRows = false;
             this.dataGridSipariseAitUrunler.AllowUserToDeleteRows = false;
             this.dataGridSipariseAitUrunler.AllowUserToResizeRows = false;
@@ -159,10 +160,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridSipariseAitUrunler.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridSipariseAitUrunler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridSipariseAitUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridSipariseAitUrunler.Size = new System.Drawing.Size(835, 433);
-            this.dataGridSipariseAitUrunler.TabIndex = 0;
+            this.dataGridSipariseAitUrunler.TabIndex = 1;
             // 
             // btnUrunuSipariseEkle
             // 

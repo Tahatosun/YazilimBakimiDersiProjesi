@@ -59,15 +59,14 @@ namespace YazilimBakimi
             {
                 orderProcessing.SipariseUrunEkle(urunListesi, siparisListesi, cmbBxUrunler.Text, seciliUrun.UrunID,
                                                     numUrunAdeti.Value.ToString(), urunListesi[cmbBxUrunler.SelectedIndex].urunBirimFiyat);
-                txtToplamFiyat.Text = orderProcessing.siparisTutarıHesapla(siparisListesi).ToString();
-                dataGridSipariseAitUrunler.DataSource = null;
-                dataGridSipariseAitUrunler.DataSource = siparisListesi;
+                txtToplamFiyat.Text = orderProcessing.siparisTutarıHesapla(siparisListesi).ToString();              
             }
+            orderProcessing.dataGridSipariseAitUrunleriGetir(dataGridSipariseAitUrunler, siparisListesi);
         }
 
         private void btnSiparisiTamamla_Click(object sender, EventArgs e)
         {                  
-            orderProcessing.SiparisOlustur(bayiList[cmbBxSiparisiVerenBayi.SelectedIndex].BayiId, orderProcessing.siparisTutarıHesapla(siparisListesi),siparisListesi);   
+            orderProcessing.SiparisOlustur(bayiList[cmbBxSiparisiVerenBayi.SelectedIndex].BayiId, orderProcessing.siparisTutarıHesapla(siparisListesi),siparisListesi);            
         }
     }
 }
