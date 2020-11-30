@@ -184,7 +184,6 @@ namespace YazilimBakimi
             while (data.Read())
             {
                 if (data[0].ToString() != "") {
-                    MessageBox.Show(data[0].ToString());
                     guncelTutar = (float)Double.Parse(data[0].ToString());
                 }                
             }
