@@ -26,6 +26,7 @@ namespace YazilimBakimi
             productOperation.UrunleriGetir(dataGridUrunler);
             dealerOperations.bayileriGetir(dataGridBayiler);
             orderProcessing.siparisleriGetir(dataGridSiparisler);
+            changeRowColor();
             
             //dataGridUrunler.DataSource = productOperation.UrunleriGetir();
         }
@@ -148,6 +149,21 @@ namespace YazilimBakimi
                 siparisDetayiGoruntulemeEkrani.Show();
             }
             
+        }
+        private void changeRowColor()
+        {
+            foreach(DataGridViewRow row in dataGridUrunler.Rows)
+            {
+                if (Convert.ToInt32(row.Cells[2].Value) < 20)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Orange;
+                }
+                else if (Convert.ToInt32(row.Cells[2].Value) < 10)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+
+                }
+            }
         }
 
       
