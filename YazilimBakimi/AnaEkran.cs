@@ -129,6 +129,7 @@ namespace YazilimBakimi
             SiparisOlusturmaEkrani siparisOlusturmaEkrani = new SiparisOlusturmaEkrani();
             siparisOlusturmaEkrani.dataGridViewSiparisler = dataGridSiparisler;
             siparisOlusturmaEkrani.Show();
+
         }
 
        
@@ -154,18 +155,25 @@ namespace YazilimBakimi
         {
             foreach(DataGridViewRow row in dataGridUrunler.Rows)
             {
-                if (Convert.ToInt32(row.Cells[2].Value) < 20)
-                {
-                    row.DefaultCellStyle.BackColor = Color.Orange;
-                }
-                else if (Convert.ToInt32(row.Cells[2].Value) < 10)
+                if (Convert.ToInt32(row.Cells[2].Value) < 10)
                 {
                     row.DefaultCellStyle.BackColor = Color.Red;
+                }
+                else if (Convert.ToInt32(row.Cells[2].Value) < 20)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Orange;
 
                 }
             }
         }
 
-      
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            productOperation.UrunleriGetir(dataGridUrunler);
+            dealerOperations.bayileriGetir(dataGridBayiler);
+            orderProcessing.siparisleriGetir(dataGridSiparisler);
+            changeRowColor();
+            
+        }
     }
 }

@@ -99,6 +99,7 @@
             this.tabControl.Size = new System.Drawing.Size(1093, 709);
             this.tabControl.TabIndex = 0;
             this.tabControl.UseSelectable = true;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tpUrunYonetimi
             // 
