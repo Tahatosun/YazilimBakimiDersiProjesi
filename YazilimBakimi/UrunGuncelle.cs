@@ -34,7 +34,7 @@ namespace YazilimBakimi
         {
             if (txtBxUrunAdiGuncelle.Text != "" && txtBxStokAdediGuncelle.Text != "" && txtBxBirimFiyatGuncelle.Text != "")
             {
-                if (Convert.ToInt64(txtBxStokAdediGuncelle.Text) >= 0 && Convert.ToInt64(txtBxBirimFiyatGuncelle.Text) > 0)
+                if (Convert.ToDouble(txtBxStokAdediGuncelle.Text) >= 0 && Convert.ToDouble(txtBxBirimFiyatGuncelle.Text) > 0)
                 {
                     productOperations.urunGuncelle(txtUrunGuncelleUrunID.Text,txtBxUrunAdiGuncelle.Text,txtBxStokAdediGuncelle.Text,txtBxBirimFiyatGuncelle.Text);
                     productOperations.UrunleriGetir(urunelerDataGrid);

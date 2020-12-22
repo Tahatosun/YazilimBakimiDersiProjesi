@@ -95,7 +95,7 @@
             this.tabControl.Location = new System.Drawing.Point(23, 81);
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 2;
+            this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1093, 709);
             this.tabControl.TabIndex = 0;
             this.tabControl.UseSelectable = true;
@@ -224,6 +224,7 @@
             this.dataGridUrunler.AllowUserToAddRows = false;
             this.dataGridUrunler.AllowUserToDeleteRows = false;
             this.dataGridUrunler.AllowUserToResizeRows = false;
+            this.dataGridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridUrunler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridUrunler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -399,6 +400,7 @@
             this.dataGridBayiler.AllowUserToAddRows = false;
             this.dataGridBayiler.AllowUserToDeleteRows = false;
             this.dataGridBayiler.AllowUserToResizeRows = false;
+            this.dataGridBayiler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridBayiler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridBayiler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridBayiler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -526,6 +528,7 @@
             this.dataGridSiparisler.AllowUserToAddRows = false;
             this.dataGridSiparisler.AllowUserToDeleteRows = false;
             this.dataGridSiparisler.AllowUserToResizeRows = false;
+            this.dataGridSiparisler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridSiparisler.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridSiparisler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridSiparisler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;

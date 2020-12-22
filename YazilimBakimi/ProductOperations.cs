@@ -94,13 +94,11 @@ namespace YazilimBakimi
             urunguncelle.Parameters.AddWithValue("@p0", ıd);
             urunguncelle.Parameters.AddWithValue("@p1", urunAd);
             urunguncelle.Parameters.AddWithValue("@p2", stok);
-            urunguncelle.Parameters.AddWithValue("@p3", fiyat);
+            urunguncelle.Parameters.AddWithValue("@p3",Convert.ToDouble(fiyat));
             urunguncelle.ExecuteNonQuery();
             sqlConnection.Connection().Close();
 
         }
-
-
         public void urunSil(String ıd) {
 
             sqlConnection.Connection().Open();
