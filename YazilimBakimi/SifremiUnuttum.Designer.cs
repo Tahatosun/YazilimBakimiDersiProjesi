@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pnlSUEpostaGonder = new MetroFramework.Controls.MetroPanel();
-            this.lblSifremiUnuttumEmail = new System.Windows.Forms.Label();
-            this.txtBoxKullaniciEposta = new MetroFramework.Controls.MetroTextBox();
+            this.btnSUGeriDon = new MetroFramework.Controls.MetroTile();
             this.btnKodGonder = new MetroFramework.Controls.MetroTile();
+            this.lblSifremiUnuttumEmail = new System.Windows.Forms.Label();
+            this.txtSUKullaniciEposta = new MetroFramework.Controls.MetroTextBox();
             this.pnlSUSifreyiDegistir = new MetroFramework.Controls.MetroPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSUSifreTekrar = new MetroFramework.Controls.MetroTextBox();
             this.btnSifreyiDegistir = new MetroFramework.Controls.MetroTile();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSUSifre = new MetroFramework.Controls.MetroTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSUSifreTekrar = new MetroFramework.Controls.MetroTextBox();
-            this.btnSUGeriDon = new MetroFramework.Controls.MetroTile();
             this.pnlSUKodOnay = new MetroFramework.Controls.MetroPanel();
             this.btnSUOnayla = new MetroFramework.Controls.MetroTile();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@
             this.pnlSUEpostaGonder.Controls.Add(this.btnSUGeriDon);
             this.pnlSUEpostaGonder.Controls.Add(this.btnKodGonder);
             this.pnlSUEpostaGonder.Controls.Add(this.lblSifremiUnuttumEmail);
-            this.pnlSUEpostaGonder.Controls.Add(this.txtBoxKullaniciEposta);
+            this.pnlSUEpostaGonder.Controls.Add(this.txtSUKullaniciEposta);
             this.pnlSUEpostaGonder.HorizontalScrollbarBarColor = true;
             this.pnlSUEpostaGonder.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlSUEpostaGonder.HorizontalScrollbarSize = 10;
-            this.pnlSUEpostaGonder.Location = new System.Drawing.Point(23, 74);
+            this.pnlSUEpostaGonder.Location = new System.Drawing.Point(23, 59);
             this.pnlSUEpostaGonder.Name = "pnlSUEpostaGonder";
             this.pnlSUEpostaGonder.Size = new System.Drawing.Size(590, 285);
             this.pnlSUEpostaGonder.TabIndex = 0;
@@ -65,45 +65,18 @@
             this.pnlSUEpostaGonder.VerticalScrollbarHighlightOnWheel = false;
             this.pnlSUEpostaGonder.VerticalScrollbarSize = 10;
             // 
-            // lblSifremiUnuttumEmail
+            // btnSUGeriDon
             // 
-            this.lblSifremiUnuttumEmail.AutoSize = true;
-            this.lblSifremiUnuttumEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSifremiUnuttumEmail.Location = new System.Drawing.Point(115, 83);
-            this.lblSifremiUnuttumEmail.Name = "lblSifremiUnuttumEmail";
-            this.lblSifremiUnuttumEmail.Size = new System.Drawing.Size(73, 21);
-            this.lblSifremiUnuttumEmail.TabIndex = 12;
-            this.lblSifremiUnuttumEmail.Text = "E-posta:";
-            // 
-            // txtBoxKullaniciEposta
-            // 
-            // 
-            // 
-            // 
-            this.txtBoxKullaniciEposta.CustomButton.Image = null;
-            this.txtBoxKullaniciEposta.CustomButton.Location = new System.Drawing.Point(234, 1);
-            this.txtBoxKullaniciEposta.CustomButton.Name = "";
-            this.txtBoxKullaniciEposta.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtBoxKullaniciEposta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBoxKullaniciEposta.CustomButton.TabIndex = 1;
-            this.txtBoxKullaniciEposta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBoxKullaniciEposta.CustomButton.UseSelectable = true;
-            this.txtBoxKullaniciEposta.CustomButton.Visible = false;
-            this.txtBoxKullaniciEposta.Lines = new string[0];
-            this.txtBoxKullaniciEposta.Location = new System.Drawing.Point(194, 83);
-            this.txtBoxKullaniciEposta.MaxLength = 32767;
-            this.txtBoxKullaniciEposta.Name = "txtBoxKullaniciEposta";
-            this.txtBoxKullaniciEposta.PasswordChar = '\0';
-            this.txtBoxKullaniciEposta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBoxKullaniciEposta.SelectedText = "";
-            this.txtBoxKullaniciEposta.SelectionLength = 0;
-            this.txtBoxKullaniciEposta.SelectionStart = 0;
-            this.txtBoxKullaniciEposta.ShortcutsEnabled = true;
-            this.txtBoxKullaniciEposta.Size = new System.Drawing.Size(256, 23);
-            this.txtBoxKullaniciEposta.TabIndex = 11;
-            this.txtBoxKullaniciEposta.UseSelectable = true;
-            this.txtBoxKullaniciEposta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxKullaniciEposta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.btnSUGeriDon.ActiveControl = null;
+            this.btnSUGeriDon.Location = new System.Drawing.Point(119, 124);
+            this.btnSUGeriDon.Name = "btnSUGeriDon";
+            this.btnSUGeriDon.Size = new System.Drawing.Size(146, 40);
+            this.btnSUGeriDon.TabIndex = 14;
+            this.btnSUGeriDon.Text = "Geri Dön";
+            this.btnSUGeriDon.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSUGeriDon.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnSUGeriDon.UseSelectable = true;
+            this.btnSUGeriDon.Click += new System.EventHandler(this.btnSUGeriDon_Click);
             // 
             // btnKodGonder
             // 
@@ -118,6 +91,46 @@
             this.btnKodGonder.UseSelectable = true;
             this.btnKodGonder.Click += new System.EventHandler(this.btnKodGonder_Click);
             // 
+            // lblSifremiUnuttumEmail
+            // 
+            this.lblSifremiUnuttumEmail.AutoSize = true;
+            this.lblSifremiUnuttumEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSifremiUnuttumEmail.Location = new System.Drawing.Point(115, 83);
+            this.lblSifremiUnuttumEmail.Name = "lblSifremiUnuttumEmail";
+            this.lblSifremiUnuttumEmail.Size = new System.Drawing.Size(73, 21);
+            this.lblSifremiUnuttumEmail.TabIndex = 12;
+            this.lblSifremiUnuttumEmail.Text = "E-posta:";
+            // 
+            // txtSUKullaniciEposta
+            // 
+            // 
+            // 
+            // 
+            this.txtSUKullaniciEposta.CustomButton.Image = null;
+            this.txtSUKullaniciEposta.CustomButton.Location = new System.Drawing.Point(234, 1);
+            this.txtSUKullaniciEposta.CustomButton.Name = "";
+            this.txtSUKullaniciEposta.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSUKullaniciEposta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSUKullaniciEposta.CustomButton.TabIndex = 1;
+            this.txtSUKullaniciEposta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSUKullaniciEposta.CustomButton.UseSelectable = true;
+            this.txtSUKullaniciEposta.CustomButton.Visible = false;
+            this.txtSUKullaniciEposta.Lines = new string[0];
+            this.txtSUKullaniciEposta.Location = new System.Drawing.Point(194, 83);
+            this.txtSUKullaniciEposta.MaxLength = 32767;
+            this.txtSUKullaniciEposta.Name = "txtSUKullaniciEposta";
+            this.txtSUKullaniciEposta.PasswordChar = '\0';
+            this.txtSUKullaniciEposta.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSUKullaniciEposta.SelectedText = "";
+            this.txtSUKullaniciEposta.SelectionLength = 0;
+            this.txtSUKullaniciEposta.SelectionStart = 0;
+            this.txtSUKullaniciEposta.ShortcutsEnabled = true;
+            this.txtSUKullaniciEposta.Size = new System.Drawing.Size(256, 23);
+            this.txtSUKullaniciEposta.TabIndex = 11;
+            this.txtSUKullaniciEposta.UseSelectable = true;
+            this.txtSUKullaniciEposta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSUKullaniciEposta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // pnlSUSifreyiDegistir
             // 
             this.pnlSUSifreyiDegistir.Controls.Add(this.label2);
@@ -128,7 +141,7 @@
             this.pnlSUSifreyiDegistir.HorizontalScrollbarBarColor = true;
             this.pnlSUSifreyiDegistir.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlSUSifreyiDegistir.HorizontalScrollbarSize = 10;
-            this.pnlSUSifreyiDegistir.Location = new System.Drawing.Point(17, 61);
+            this.pnlSUSifreyiDegistir.Location = new System.Drawing.Point(26, 59);
             this.pnlSUSifreyiDegistir.Name = "pnlSUSifreyiDegistir";
             this.pnlSUSifreyiDegistir.Size = new System.Drawing.Size(590, 285);
             this.pnlSUSifreyiDegistir.TabIndex = 1;
@@ -136,6 +149,46 @@
             this.pnlSUSifreyiDegistir.VerticalScrollbarHighlightOnWheel = false;
             this.pnlSUSifreyiDegistir.VerticalScrollbarSize = 10;
             this.pnlSUSifreyiDegistir.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(115, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 21);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Yeni Şifre Tekrar:";
+            // 
+            // txtSUSifreTekrar
+            // 
+            // 
+            // 
+            // 
+            this.txtSUSifreTekrar.CustomButton.Image = null;
+            this.txtSUSifreTekrar.CustomButton.Location = new System.Drawing.Point(173, 1);
+            this.txtSUSifreTekrar.CustomButton.Name = "";
+            this.txtSUSifreTekrar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtSUSifreTekrar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSUSifreTekrar.CustomButton.TabIndex = 1;
+            this.txtSUSifreTekrar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSUSifreTekrar.CustomButton.UseSelectable = true;
+            this.txtSUSifreTekrar.CustomButton.Visible = false;
+            this.txtSUSifreTekrar.Lines = new string[0];
+            this.txtSUSifreTekrar.Location = new System.Drawing.Point(255, 123);
+            this.txtSUSifreTekrar.MaxLength = 32767;
+            this.txtSUSifreTekrar.Name = "txtSUSifreTekrar";
+            this.txtSUSifreTekrar.PasswordChar = '*';
+            this.txtSUSifreTekrar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSUSifreTekrar.SelectedText = "";
+            this.txtSUSifreTekrar.SelectionLength = 0;
+            this.txtSUSifreTekrar.SelectionStart = 0;
+            this.txtSUSifreTekrar.ShortcutsEnabled = true;
+            this.txtSUSifreTekrar.Size = new System.Drawing.Size(195, 23);
+            this.txtSUSifreTekrar.TabIndex = 14;
+            this.txtSUSifreTekrar.UseSelectable = true;
+            this.txtSUSifreTekrar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSUSifreTekrar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnSifreyiDegistir
             // 
@@ -190,59 +243,6 @@
             this.txtSUSifre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSUSifre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(115, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 21);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Yeni Şifre Tekrar:";
-            // 
-            // txtSUSifreTekrar
-            // 
-            // 
-            // 
-            // 
-            this.txtSUSifreTekrar.CustomButton.Image = null;
-            this.txtSUSifreTekrar.CustomButton.Location = new System.Drawing.Point(173, 1);
-            this.txtSUSifreTekrar.CustomButton.Name = "";
-            this.txtSUSifreTekrar.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtSUSifreTekrar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSUSifreTekrar.CustomButton.TabIndex = 1;
-            this.txtSUSifreTekrar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSUSifreTekrar.CustomButton.UseSelectable = true;
-            this.txtSUSifreTekrar.CustomButton.Visible = false;
-            this.txtSUSifreTekrar.Lines = new string[0];
-            this.txtSUSifreTekrar.Location = new System.Drawing.Point(255, 123);
-            this.txtSUSifreTekrar.MaxLength = 32767;
-            this.txtSUSifreTekrar.Name = "txtSUSifreTekrar";
-            this.txtSUSifreTekrar.PasswordChar = '*';
-            this.txtSUSifreTekrar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSUSifreTekrar.SelectedText = "";
-            this.txtSUSifreTekrar.SelectionLength = 0;
-            this.txtSUSifreTekrar.SelectionStart = 0;
-            this.txtSUSifreTekrar.ShortcutsEnabled = true;
-            this.txtSUSifreTekrar.Size = new System.Drawing.Size(195, 23);
-            this.txtSUSifreTekrar.TabIndex = 14;
-            this.txtSUSifreTekrar.UseSelectable = true;
-            this.txtSUSifreTekrar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSUSifreTekrar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnSUGeriDon
-            // 
-            this.btnSUGeriDon.ActiveControl = null;
-            this.btnSUGeriDon.Location = new System.Drawing.Point(119, 124);
-            this.btnSUGeriDon.Name = "btnSUGeriDon";
-            this.btnSUGeriDon.Size = new System.Drawing.Size(146, 40);
-            this.btnSUGeriDon.TabIndex = 14;
-            this.btnSUGeriDon.Text = "Geri Dön";
-            this.btnSUGeriDon.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSUGeriDon.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btnSUGeriDon.UseSelectable = true;
-            this.btnSUGeriDon.Click += new System.EventHandler(this.btnSUGeriDon_Click);
-            // 
             // pnlSUKodOnay
             // 
             this.pnlSUKodOnay.Controls.Add(this.btnSUOnayla);
@@ -251,7 +251,7 @@
             this.pnlSUKodOnay.HorizontalScrollbarBarColor = true;
             this.pnlSUKodOnay.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlSUKodOnay.HorizontalScrollbarSize = 10;
-            this.pnlSUKodOnay.Location = new System.Drawing.Point(20, 63);
+            this.pnlSUKodOnay.Location = new System.Drawing.Point(29, 56);
             this.pnlSUKodOnay.Name = "pnlSUKodOnay";
             this.pnlSUKodOnay.Size = new System.Drawing.Size(590, 285);
             this.pnlSUKodOnay.TabIndex = 2;
@@ -318,9 +318,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 382);
-            this.Controls.Add(this.pnlSUKodOnay);
             this.Controls.Add(this.pnlSUSifreyiDegistir);
             this.Controls.Add(this.pnlSUEpostaGonder);
+            this.Controls.Add(this.pnlSUKodOnay);
             this.Name = "SifremiUnuttum";
             this.Text = "SifremiUnuttum";
             this.Load += new System.EventHandler(this.SifremiUnuttum_Load);
@@ -338,7 +338,7 @@
 
         private MetroFramework.Controls.MetroPanel pnlSUEpostaGonder;
         private System.Windows.Forms.Label lblSifremiUnuttumEmail;
-        private MetroFramework.Controls.MetroTextBox txtBoxKullaniciEposta;
+        private MetroFramework.Controls.MetroTextBox txtSUKullaniciEposta;
         private MetroFramework.Controls.MetroTile btnKodGonder;
         private MetroFramework.Controls.MetroPanel pnlSUSifreyiDegistir;
         private MetroFramework.Controls.MetroTile btnSifreyiDegistir;

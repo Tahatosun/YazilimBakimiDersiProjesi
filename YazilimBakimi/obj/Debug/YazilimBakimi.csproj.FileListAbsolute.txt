@@ -146,3 +146,4 @@ C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\ob
 C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.csproj.CopyComplete
 C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.exe
 C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.pdb
+D:\Projeler\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SifremiUnuttum.resources
