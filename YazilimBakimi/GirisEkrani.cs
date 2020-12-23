@@ -72,15 +72,16 @@ namespace YazilimBakimi
                         if (logindataBaseOperations.EpostaKontrol(txtBoxEpostaKayit.Text) == true)
                         {
                             logindataBaseOperations.KullaniciEkle(txtBoxAdKayit.Text, txtBoxSoyadKayit.Text, txtBoxEpostaKayit.Text, txtBoxSifreKayit.Text);
+                            pnlKayitol.Visible = false;
+                            pnlLogin.Visible = true;
+
                         }
                         else
                         {
-                            MessageBox.Show("Bu e-posta adresiyle bir Kayıt Mevcut");
+                            MessageBox.Show("Eposta Adresinizi Kontrol Edin.");
                         }
 
-                        pnlKayitol.Visible = false;
-                        pnlLogin.Visible = true;
-
+                      
 
 
                     }

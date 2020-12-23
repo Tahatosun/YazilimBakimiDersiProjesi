@@ -74,8 +74,16 @@ namespace YazilimBakimi
         private void btnUrunSil_Click(object sender, EventArgs e)
         {
 
-            productOperation.urunSil(txtBxUrunSilID.Text);
-            productOperation.UrunleriGetir(dataGridUrunler);
+            DialogResult dialog = new DialogResult();
+            dialog = MessageBox.Show( txtBxUrunSilID.Text+" Numaralı ürün Silinsin mi?", "Ürün Sil", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                productOperation.urunSil(txtBxUrunSilID.Text);
+                productOperation.UrunleriGetir(dataGridUrunler);
+            }
+          
+
+         
 
         }
 

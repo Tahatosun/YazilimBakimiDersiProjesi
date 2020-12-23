@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace YazilimBakimi
 {
@@ -21,7 +22,7 @@ namespace YazilimBakimi
             PasswordEncryption passwordEncryption = new PasswordEncryption();
 
 
-            SqlCommand userAdd = new SqlCommand("insert into tblKullanici (KulAd,KulSoyad,kulEposta,kulSifre) values(@p1,@p2,@p3,@p4)", sqlConnection.Connection());
+            SqlCommand userAdd = new SqlCommand("insert into tblKullanici (KulAd,KulSoyad,kulEposta,kulSifre,KulDurum) values(@p1,@p2,@p3,@p4,1)", sqlConnection.Connection());
             userAdd.Parameters.AddWithValue("@p1", ad);
             userAdd.Parameters.AddWithValue("@p2", soyad);
             userAdd.Parameters.AddWithValue("@p3", eposta);
@@ -35,6 +36,26 @@ namespace YazilimBakimi
         }
 
         public Boolean EpostaKontrol(String eposta) {
+
+            try
+            {
+               
+                var mail = new MailAddress(eposta);
+                bool isValidEmail = mail.Host.Contains(".");
+                if (!isValidEmail)
+                {
+                   return false;
+                }
+                            
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+
+
+
 
             sqlConnection.Connection().Open();
             SqlCommand epostaKontrol = new SqlCommand("select kulEposta from tblKullanici", sqlConnection.Connection());
@@ -52,20 +73,47 @@ namespace YazilimBakimi
         public Boolean Giris(string eposta, string sifre)
         {
             PasswordEncryption passwordEncryption = new PasswordEncryption();
+            if (kullaniciDurumKontrol(eposta))
+            {
+                sqlConnection.Connection().Open();
+                SqlCommand epostaKontrol = new SqlCommand("select kulEposta, kulSifre from tblKullanici", sqlConnection.Connection());
+                SqlDataReader data = epostaKontrol.ExecuteReader();
+                while (data.Read())
+                {
+                    if (eposta == data[0].ToString() && passwordEncryption.Md5(sifre) == data[1].ToString())
+                    {
+                        sqlConnection.Connection().Close();
+                        return true;
+                    }
+                }
+                sqlConnection.Connection().Close();
+                return false;
+            }
+            else {               
+                return false;
+            }
+         
 
+
+            
+        }
+
+
+        public Boolean kullaniciDurumKontrol(string eposta) {
 
             sqlConnection.Connection().Open();
-            SqlCommand epostaKontrol = new SqlCommand("select kulEposta, kulSifre from tblKullanici", sqlConnection.Connection());
+            SqlCommand epostaKontrol = new SqlCommand("select kulEposta,KulDurum from tblKullanici", sqlConnection.Connection());
             SqlDataReader data = epostaKontrol.ExecuteReader();
             while (data.Read())
             {
-                if (eposta == data[0].ToString() && passwordEncryption.Md5(sifre) == data[1].ToString())
+                if (eposta == data[0].ToString() && data[1].ToString() =="True" )
                 {
                     sqlConnection.Connection().Close();
-                    return true;
+                    return true;                    
                 }
             }
             sqlConnection.Connection().Close();
+
             return false;
         }
 
