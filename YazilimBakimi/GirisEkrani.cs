@@ -14,7 +14,7 @@ namespace YazilimBakimi
 {
     public partial class GirisEkrani : MetroFramework.Forms.MetroForm
     {
-        LoginDataBaseOperations LogindataBaseOperations = new LoginDataBaseOperations();
+        LoginDataBaseOperations logindataBaseOperations = new LoginDataBaseOperations();
       
         public GirisEkrani()
         {
@@ -40,25 +40,65 @@ namespace YazilimBakimi
             
 
             if (txtBoxAdKayit.Text != "" && txtBoxSoyadKayit.Text != "" && txtBoxEpostaKayit.Text != "" && txtBoxSifreKayit.Text != "" && txtBoxSifreKayitTekrar.Text != "") {
-                if (txtBoxSifreKayit.Text == txtBoxSifreKayitTekrar.Text)
+                if (txtBoxSifreKayit.Text.Length >= 8)
                 {
-                    if (LogindataBaseOperations.EpostaKontrol(txtBoxEpostaKayit.Text) == true) {
-                        LogindataBaseOperations.KullaniciEkle(txtBoxAdKayit.Text, txtBoxSoyadKayit.Text, txtBoxEpostaKayit.Text, txtBoxSifreKayit.Text);
+                    Boolean sayi = false;
+                    Boolean kucukHarf = false;
+                    Boolean buyukHarf = false;
+                    Boolean ozelKarakter = false;
+                    foreach (char x in txtBoxSifreKayit.Text)
+                    {
+                        if (Convert.ToInt32(x) >= 48 && Convert.ToInt32(x) <= 57)
+                        {
+                            sayi = true;
+                        }
+                        if (Convert.ToInt32(x) >= 97 && Convert.ToInt32(x) <= 122)
+                        {
+                            kucukHarf = true;
+                        }
+                        if (Convert.ToInt32(x) >= 65 && Convert.ToInt32(x) <= 90)
+                        {
+                            buyukHarf = true;
+                        }
+                        if (Convert.ToInt32(x) >= 33 && Convert.ToInt32(x) <= 64 || Convert.ToInt32(x) >= 91 && Convert.ToInt32(x) <= 96 || Convert.ToInt32(x) >= 123 && Convert.ToInt32(x) <= 126)
+                        {
+                            ozelKarakter = true;
+                        }
+                    }
+                    if (sayi = true && kucukHarf == true && buyukHarf == true && ozelKarakter == true && txtBoxSifreKayit.Text == txtBoxSifreKayitTekrar.Text)
+                    {
+
+
+                        if (logindataBaseOperations.EpostaKontrol(txtBoxEpostaKayit.Text) == true)
+                        {
+                            logindataBaseOperations.KullaniciEkle(txtBoxAdKayit.Text, txtBoxSoyadKayit.Text, txtBoxEpostaKayit.Text, txtBoxSifreKayit.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bu e-posta adresiyle bir Kayıt Mevcut");
+                        }
+
+                        pnlKayitol.Visible = false;
+                        pnlLogin.Visible = true;
+
+
+
                     }
                     else
                     {
-                        MessageBox.Show("Bu e-posta adresiyle bir Kayıt Mevcut");
+                        MessageBox.Show("şifre en az birer adet\n rakam, büyük harf, küçük harf, özel karkakter\niçermelidir.");
                     }
 
-                    pnlKayitol.Visible = false;
-                    pnlLogin.Visible = true;
 
                 }
-                else {
-                    MessageBox.Show("Şifrelerin Doğruluğunu Kontrol Edin!");
-                    txtBoxSifreKayit.Text = "";
-                    txtBoxSifreKayitTekrar.Text = "";                    
+                else
+                {
+                    MessageBox.Show("Şifreniz Mininum 8 Karakter Olmalıdır.");
                 }
+
+            
+
+              
             }
             else
             {
@@ -75,7 +115,7 @@ namespace YazilimBakimi
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
 
-            if (LogindataBaseOperations.Giris(txtBoxKullaniciEposta.Text, txtBoxSifre.Text)==true){
+            if (logindataBaseOperations.Giris(txtBoxKullaniciEposta.Text, txtBoxSifre.Text)==true){
                 AnaEkran anaEkran = new AnaEkran();
                 anaEkran.Show();
                 this.Hide();
