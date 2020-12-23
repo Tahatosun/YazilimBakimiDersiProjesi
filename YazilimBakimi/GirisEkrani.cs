@@ -86,5 +86,12 @@ namespace YazilimBakimi
             }
            
         }
+
+        private void btnSifremiUnuttum_Click(object sender, EventArgs e)
+        {
+            SifremiUnuttum sifremiUnuttum = new SifremiUnuttum();
+            sifremiUnuttum.Show();
+            this.Hide();
+        }
     }
 }

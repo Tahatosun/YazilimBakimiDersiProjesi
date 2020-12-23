@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLogin = new MetroFramework.Controls.MetroPanel();
+            this.btnSifremiUnuttum = new MetroFramework.Controls.MetroTile();
             this.lblSifre = new System.Windows.Forms.Label();
             this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.btnKayitol = new MetroFramework.Controls.MetroTile();
@@ -56,6 +57,7 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.btnSifremiUnuttum);
             this.pnlLogin.Controls.Add(this.lblSifre);
             this.pnlLogin.Controls.Add(this.lblKullaniciAdi);
             this.pnlLogin.Controls.Add(this.btnKayitol);
@@ -73,6 +75,19 @@
             this.pnlLogin.VerticalScrollbarBarColor = true;
             this.pnlLogin.VerticalScrollbarHighlightOnWheel = false;
             this.pnlLogin.VerticalScrollbarSize = 10;
+            // 
+            // btnSifremiUnuttum
+            // 
+            this.btnSifremiUnuttum.ActiveControl = null;
+            this.btnSifremiUnuttum.Location = new System.Drawing.Point(477, 278);
+            this.btnSifremiUnuttum.Name = "btnSifremiUnuttum";
+            this.btnSifremiUnuttum.Size = new System.Drawing.Size(134, 40);
+            this.btnSifremiUnuttum.TabIndex = 12;
+            this.btnSifremiUnuttum.Text = "Şifremi Unuttum";
+            this.btnSifremiUnuttum.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSifremiUnuttum.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.btnSifremiUnuttum.UseSelectable = true;
+            this.btnSifremiUnuttum.Click += new System.EventHandler(this.btnSifremiUnuttum_Click);
             // 
             // lblSifre
             // 
@@ -97,9 +112,9 @@
             // btnKayitol
             // 
             this.btnKayitol.ActiveControl = null;
-            this.btnKayitol.Location = new System.Drawing.Point(477, 278);
+            this.btnKayitol.Location = new System.Drawing.Point(358, 324);
             this.btnKayitol.Name = "btnKayitol";
-            this.btnKayitol.Size = new System.Drawing.Size(113, 40);
+            this.btnKayitol.Size = new System.Drawing.Size(253, 40);
             this.btnKayitol.TabIndex = 9;
             this.btnKayitol.Text = "Kayıt Ol";
             this.btnKayitol.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -136,7 +151,7 @@
             // 
             // 
             this.txtBoxSifre.CustomButton.Image = null;
-            this.txtBoxSifre.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.txtBoxSifre.CustomButton.Location = new System.Drawing.Point(175, 1);
             this.txtBoxSifre.CustomButton.Name = "";
             this.txtBoxSifre.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxSifre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -154,7 +169,7 @@
             this.txtBoxSifre.SelectionLength = 0;
             this.txtBoxSifre.SelectionStart = 0;
             this.txtBoxSifre.ShortcutsEnabled = true;
-            this.txtBoxSifre.Size = new System.Drawing.Size(161, 23);
+            this.txtBoxSifre.Size = new System.Drawing.Size(197, 23);
             this.txtBoxSifre.TabIndex = 5;
             this.txtBoxSifre.UseSelectable = true;
             this.txtBoxSifre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -166,7 +181,7 @@
             // 
             // 
             this.txtBoxKullaniciEposta.CustomButton.Image = null;
-            this.txtBoxKullaniciEposta.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.txtBoxKullaniciEposta.CustomButton.Location = new System.Drawing.Point(175, 1);
             this.txtBoxKullaniciEposta.CustomButton.Name = "";
             this.txtBoxKullaniciEposta.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxKullaniciEposta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -184,7 +199,7 @@
             this.txtBoxKullaniciEposta.SelectionLength = 0;
             this.txtBoxKullaniciEposta.SelectionStart = 0;
             this.txtBoxKullaniciEposta.ShortcutsEnabled = true;
-            this.txtBoxKullaniciEposta.Size = new System.Drawing.Size(161, 23);
+            this.txtBoxKullaniciEposta.Size = new System.Drawing.Size(197, 23);
             this.txtBoxKullaniciEposta.TabIndex = 4;
             this.txtBoxKullaniciEposta.UseSelectable = true;
             this.txtBoxKullaniciEposta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -495,6 +510,7 @@
         private MetroFramework.Controls.MetroTextBox txtBoxAdKayit;
         private System.Windows.Forms.Label lblSifreKayit;
         private MetroFramework.Controls.MetroTextBox txtBoxSifreKayit;
+        private MetroFramework.Controls.MetroTile btnSifremiUnuttum;
     }
 }
 

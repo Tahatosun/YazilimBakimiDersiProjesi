@@ -113,3 +113,36 @@ C:\Users\tahat\OneDrive\Masaüstü\Yeni klasör (2)\YazilimBakimiDersiProjesi\Ya
 C:\Users\tahat\OneDrive\Masaüstü\Yeni klasör (2)\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.csproj.CopyComplete
 C:\Users\tahat\OneDrive\Masaüstü\Yeni klasör (2)\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.exe
 C:\Users\tahat\OneDrive\Masaüstü\Yeni klasör (2)\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.pdb
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\YazilimBakimi.exe.config
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\YazilimBakimi.exe
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\YazilimBakimi.pdb
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\MetroFramework.Design.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\MetroFramework.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\DevExpress.Data.v19.1.xml
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\DevExpress.Xpo.v19.1.xml
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\de\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\es\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ja\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\bin\Debug\ru\DevExpress.Xpo.v19.1.resources.dll
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.csprojAssemblyReference.cache
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.AnaEkran.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.BayiEkle.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.BayiGuncelle.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.GirisEkrani.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.Properties.Resources.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SifremiUnuttum.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisDetayGuncelle.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisDetayiGoruntulemeEkrani.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.SiparisOlusturmaEkrani.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.UrunEkle.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.UrunGuncelle.resources
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.csproj.GenerateResource.cache
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.csproj.CoreCompileInputs.cache
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.csproj.CopyComplete
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.exe
+C:\Users\tahat\OneDrive\Masaüstü\yb\YazilimBakimiDersiProjesi\YazilimBakimi\obj\Debug\YazilimBakimi.pdb
