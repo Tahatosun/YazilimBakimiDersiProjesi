@@ -128,8 +128,19 @@ namespace YazilimBakimi
 
         private void btnBayiSil_Click(object sender, EventArgs e)
         {
-            dealerOperations.BayiSil(txtBayiSilID.Text);
-            dealerOperations.bayileriGetir(dataGridBayiler);
+
+            DialogResult dialog = new DialogResult();
+            dialog = MessageBox.Show(txtBxUrunSilID.Text + " Numaralı Bayi Silinsin mi?", "Bayi Sil", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                dealerOperations.BayiSil(txtBayiSilID.Text);
+                dealerOperations.bayileriGetir(dataGridBayiler);
+
+            }
+
+
+
+           
         }
 
         private void btnSiparisOlustur_Click(object sender, EventArgs e)

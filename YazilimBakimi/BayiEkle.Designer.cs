@@ -37,6 +37,10 @@
             this.btnEkleBayi = new MetroFramework.Controls.MetroTile();
             this.txtBayiEposta = new System.Windows.Forms.TextBox();
             this.txtBayiTel = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbBayiEkleil = new System.Windows.Forms.ComboBox();
+            this.cmbBxilce = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtBayiAd
@@ -83,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(28, 309);
+            this.label3.Location = new System.Drawing.Point(26, 354);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 21);
             this.label3.TabIndex = 9;
@@ -93,7 +97,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(28, 353);
+            this.label4.Location = new System.Drawing.Point(26, 398);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 21);
             this.label4.TabIndex = 11;
@@ -102,7 +106,7 @@
             // btnEkleBayi
             // 
             this.btnEkleBayi.ActiveControl = null;
-            this.btnEkleBayi.Location = new System.Drawing.Point(32, 409);
+            this.btnEkleBayi.Location = new System.Drawing.Point(30, 443);
             this.btnEkleBayi.Name = "btnEkleBayi";
             this.btnEkleBayi.Size = new System.Drawing.Size(468, 49);
             this.btnEkleBayi.TabIndex = 13;
@@ -115,7 +119,7 @@
             // txtBayiEposta
             // 
             this.txtBayiEposta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBayiEposta.Location = new System.Drawing.Point(152, 307);
+            this.txtBayiEposta.Location = new System.Drawing.Point(150, 352);
             this.txtBayiEposta.MaxLength = 50;
             this.txtBayiEposta.Name = "txtBayiEposta";
             this.txtBayiEposta.Size = new System.Drawing.Size(348, 26);
@@ -124,17 +128,60 @@
             // txtBayiTel
             // 
             this.txtBayiTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.txtBayiTel.Location = new System.Drawing.Point(152, 353);
+            this.txtBayiTel.Location = new System.Drawing.Point(150, 398);
             this.txtBayiTel.Mask = "00000000000";
             this.txtBayiTel.Name = "txtBayiTel";
             this.txtBayiTel.Size = new System.Drawing.Size(348, 24);
             this.txtBayiTel.TabIndex = 14;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(23, 299);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 21);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "İl:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(255, 299);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 21);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "İlçe:";
+            // 
+            // cmbBayiEkleil
+            // 
+            this.cmbBayiEkleil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbBayiEkleil.FormattingEnabled = true;
+            this.cmbBayiEkleil.Location = new System.Drawing.Point(56, 295);
+            this.cmbBayiEkleil.Name = "cmbBayiEkleil";
+            this.cmbBayiEkleil.Size = new System.Drawing.Size(193, 28);
+            this.cmbBayiEkleil.TabIndex = 17;
+            this.cmbBayiEkleil.SelectedValueChanged += new System.EventHandler(this.cmbBayiEkleil_SelectedValueChanged);
+            // 
+            // cmbBxilce
+            // 
+            this.cmbBxilce.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbBxilce.FormattingEnabled = true;
+            this.cmbBxilce.Location = new System.Drawing.Point(307, 295);
+            this.cmbBxilce.Name = "cmbBxilce";
+            this.cmbBxilce.Size = new System.Drawing.Size(193, 28);
+            this.cmbBxilce.TabIndex = 18;
+            // 
             // BayiEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 490);
+            this.ClientSize = new System.Drawing.Size(527, 519);
+            this.Controls.Add(this.cmbBxilce);
+            this.Controls.Add(this.cmbBayiEkleil);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBayiTel);
             this.Controls.Add(this.btnEkleBayi);
             this.Controls.Add(this.label4);
@@ -163,5 +210,9 @@
         private MetroFramework.Controls.MetroTile btnEkleBayi;
         private System.Windows.Forms.TextBox txtBayiEposta;
         private System.Windows.Forms.MaskedTextBox txtBayiTel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbBayiEkleil;
+        private System.Windows.Forms.ComboBox cmbBxilce;
     }
 }

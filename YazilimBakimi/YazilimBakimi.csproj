@@ -77,6 +77,8 @@
       <DependentUpon>BayiGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="DealerOperations.cs" />
+    <Compile Include="il.cs" />
+    <Compile Include="ilce.cs" />
     <Compile Include="LoginDataBaseOperations.cs" />
     <Compile Include="GirisEkrani.cs">
       <SubType>Form</SubType>

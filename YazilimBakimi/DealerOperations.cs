@@ -5,15 +5,74 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace YazilimBakimi
 {
     class DealerOperations
     {
         SQlConnection sqlConnection = new SQlConnection();
-        
 
-        public void bayiEkle(String bayiAd,String bayiEposta, String bayiTel,String bayiAdres) {
+        public void cmbBayiEkleIlItemsAdd(ComboBox cmbBayiEkleil, List<il> iller)
+        {
+            sqlConnection.Connection().Open();
+            SqlCommand urungetir = new SqlCommand("select * from Iller", sqlConnection.Connection());
+            SqlDataReader data = urungetir.ExecuteReader();
+            while (data.Read())
+            {
+                il il = new il();
+                il.id = data[0].ToString();
+                il.ad = data[1].ToString();
+               
+                iller.Add(il);
+                cmbBayiEkleil.Items.Add(il.ad);
+            }
+            sqlConnection.Connection().Close();
+        }
+
+        public void cmbBayiEkleIlceItemsAdd(ComboBox cmbBayiEkleilce, List<ilce> ilceler,string il)
+        {
+            sqlConnection.Connection().Open();
+            SqlCommand urungetir = new SqlCommand("select * from Ilceler where IlID=@p1", sqlConnection.Connection());
+            urungetir.Parameters.AddWithValue("@p1", il);
+            SqlDataReader data = urungetir.ExecuteReader();
+            while (data.Read())
+            {
+                ilce ilce = new ilce();
+                ilce.id = data[0].ToString();
+                ilce.ilId = data[1].ToString();
+                ilce.ad = data[2].ToString();
+
+                ilceler.Add(ilce);
+                cmbBayiEkleilce.Items.Add(ilce.ad);
+            }
+            sqlConnection.Connection().Close();
+        }
+
+        public Boolean EpostaKontrolBayi(String eposta)
+        {
+
+            try
+            {
+
+                var mail = new MailAddress(eposta);
+                bool isValidEmail = mail.Host.Contains(".");
+                if (!isValidEmail)
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+           
+        }
+
+
+            public void bayiEkle(String bayiAd,String bayiEposta, String bayiTel,String bayiAdres) {
 
             sqlConnection.Connection().Open();
             SqlCommand productAdd = new SqlCommand(" insert into tblBayiler (BayiAd,bayiEposta,bayiAdres,bayiTel) values(@P1,@P2,@P3,@p4)", sqlConnection.Connection());
