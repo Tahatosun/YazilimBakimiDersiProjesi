@@ -188,8 +188,11 @@ namespace YazilimBakimi
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
+   
             productOperation.UrunleriGetir(dataGridUrunler);
+     
             dealerOperations.bayileriGetir(dataGridBayiler);
+
             orderProcessing.siparisleriGetir(dataGridSiparisler);
             changeRowColor();
             

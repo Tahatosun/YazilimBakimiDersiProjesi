@@ -12,7 +12,7 @@ namespace YazilimBakimi
     {
         public String sipariId;
         SQlConnection sqlConnection = new SQlConnection();
-        List<SiparisModel> siparisList = new List<SiparisModel>();
+
         ProductOperations productOperations = new ProductOperations();
 
 
@@ -123,6 +123,9 @@ namespace YazilimBakimi
 
         public void siparisleriGetir(DataGridView dataGridView)
         {
+            List<SiparisModel> siparisList = new List<SiparisModel>();
+  
+            
             sqlConnection.Connection().Open();
             SqlCommand urungetir = new SqlCommand("select siparisID,bayiad,siparisTarih,siparisTutar from tblSiparisler INNER JOIN tblBayiler ON tblSiparisler.bayiID =tblBayiler.bayiID", sqlConnection.Connection());
             SqlDataReader data = urungetir.ExecuteReader();
@@ -133,7 +136,11 @@ namespace YazilimBakimi
                 siparis.BayiId = data[1].ToString();
                 siparis.SiparisTarihi = Convert.ToDateTime(data[2]);
                 siparis.SiparisTutari = (float)Double.Parse(data[3].ToString());
-                siparisList.Add(siparis);
+                if(Convert.ToDouble(siparis.SiparisTutari) > 0)
+                {
+                    siparisList.Add(siparis);
+                }
+                
             }
             dataGridView.DataSource = siparisList;
             sqlConnection.Connection().Close();

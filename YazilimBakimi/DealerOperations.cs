@@ -87,6 +87,7 @@ namespace YazilimBakimi
 
 
         public void bayileriGetir(DataGridView datagrid) {
+
             List<Bayi> bayilerList = new List<Bayi>();
 
             sqlConnection.Connection().Open();

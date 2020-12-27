@@ -45,7 +45,7 @@ namespace YazilimBakimi
 
 
         public void UrunleriGetir(DataGridView datagrid) {
-
+  
             List<UrunModel> urunlerList=new List<UrunModel>();
 
             sqlConnection.Connection().Open();

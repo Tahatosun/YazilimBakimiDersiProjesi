@@ -71,6 +71,9 @@ namespace YazilimBakimi
             if (cmbBxSiparisiVerenBayi.Text != "")
             {
                 orderProcessing.SiparisOlustur(bayiList[cmbBxSiparisiVerenBayi.SelectedIndex].BayiId, orderProcessing.siparisTutarıHesapla(siparisListesi), siparisListesi);
+                
+                dataGridViewSiparisler.DataSource = null;
+                dataGridViewSiparisler.Rows.Clear();
                 orderProcessing.siparisleriGetir(dataGridViewSiparisler);
                 this.Close();
             }
