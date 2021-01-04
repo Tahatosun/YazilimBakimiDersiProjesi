@@ -223,7 +223,7 @@
             this.txtBoxSifreKayit.Location = new System.Drawing.Point(411, 258);
             this.txtBoxSifreKayit.MaxLength = 32767;
             this.txtBoxSifreKayit.Name = "txtBoxSifreKayit";
-            this.txtBoxSifreKayit.PasswordChar = '\0';
+            this.txtBoxSifreKayit.PasswordChar = '*';
             this.txtBoxSifreKayit.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxSifreKayit.SelectedText = "";
             this.txtBoxSifreKayit.SelectionLength = 0;
@@ -343,7 +343,7 @@
             this.txtBoxSifreKayitTekrar.Location = new System.Drawing.Point(411, 294);
             this.txtBoxSifreKayitTekrar.MaxLength = 32767;
             this.txtBoxSifreKayitTekrar.Name = "txtBoxSifreKayitTekrar";
-            this.txtBoxSifreKayitTekrar.PasswordChar = '\0';
+            this.txtBoxSifreKayitTekrar.PasswordChar = '*';
             this.txtBoxSifreKayitTekrar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBoxSifreKayitTekrar.SelectedText = "";
             this.txtBoxSifreKayitTekrar.SelectionLength = 0;

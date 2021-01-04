@@ -144,8 +144,7 @@ namespace YazilimBakimi
 
 
         public void sifreSifirla(string sifre,string eposta) {           
-            PasswordEncryption passwordEncryption = new PasswordEncryption();
-            MessageBox.Show(passwordEncryption.Md5(sifre) + "--" + eposta);
+            PasswordEncryption passwordEncryption = new PasswordEncryption();         
             sqlConnection.Connection().Open();
             SqlCommand urunguncelle = new SqlCommand("UPDATE tblKullanici SET kulSifre=@p1  WHERE kulEposta=@p0", sqlConnection.Connection());
             urunguncelle.Parameters.AddWithValue("@p0", eposta);
